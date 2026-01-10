@@ -39,8 +39,43 @@ const Header = () => {
         <div className="container relative z-10 px-4 md:px-8">
           <nav className="flex items-center justify-between py-[25px] md:py-[30px]">
             
-            {/* Left Menu */}
-            <div className="hidden lg:flex flex-1 items-center">
+              {/* Left Menu */}
+              <div className="hidden lg:flex flex-1 items-center">
+                <ul className="flex items-center gap-[50px]">
+                  <li>
+                    <a 
+                      href="/" 
+                      className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/menu" 
+                      className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
+                    >
+                      Menu
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Logo Central */}
+              <div className="flex items-center justify-center">
+                <a href="/" className="relative block h-[60px] w-[140px] md:h-[80px] md:w-[180px]">
+                  <Image
+                    src={isScrolled ? logoPrimary : logoWhite}
+                    alt="MD Logo"
+                    fill
+                    className={`object-contain transition-all duration-500 ${!isScrolled ? 'brightness-0 invert' : ''}`}
+                    priority
+                  />
+                </a>
+              </div>
+
+            {/* Right Menu */}
+            <div className="hidden lg:flex flex-1 items-center justify-end">
               <ul className="flex items-center gap-[50px]">
                 <li>
                   <a 
@@ -58,58 +93,23 @@ const Header = () => {
                     About
                   </a>
                 </li>
+                <li>
+                  <a 
+                      href="https://www.grubhub.com/restaurant/molo-coffee-2111-west-loop-south-houston/9333792"
+
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`nav-link px-6 py-2 border rounded-full transition-all duration-300 ${
+                      isScrolled 
+                        ? 'border-black text-black hover:bg-black hover:text-white' 
+                        : 'border-white text-white hover:bg-white hover:text-black'
+                    }`}
+                  >
+                    Order Now
+                  </a>
+                </li>
               </ul>
             </div>
-
-            {/* Logo Central */}
-            <div className="flex items-center justify-center">
-              <a href="/" className="relative block h-[60px] w-[140px] md:h-[80px] md:w-[180px]">
-                <Image
-                  src={isScrolled ? logoPrimary : logoWhite}
-                  alt="MD Logo"
-                  fill
-                  className={`object-contain transition-all duration-500 ${!isScrolled ? 'brightness-0 invert' : ''}`}
-                  priority
-                />
-              </a>
-            </div>
-
-          {/* Right Menu */}
-          <div className="hidden lg:flex flex-1 items-center justify-end">
-            <ul className="flex items-center gap-[50px]">
-              <li>
-                <a 
-                  href="/" 
-                  className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="/menu" 
-                  className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
-                >
-                  Menu
-                </a>
-              </li>
-              <li>
-                <a 
-                    href="https://www.grubhub.com/restaurant/molo-coffee-2111-west-loop-south-houston/9333792"
-
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`nav-link px-6 py-2 border rounded-full transition-all duration-300 ${
-                    isScrolled 
-                      ? 'border-black text-black hover:bg-black hover:text-white' 
-                      : 'border-white text-white hover:bg-white hover:text-black'
-                  }`}
-                >
-                  Order Now
-                </a>
-              </li>
-            </ul>
-          </div>
 
           {/* Mobile Menu Toggle */}
           <button 
