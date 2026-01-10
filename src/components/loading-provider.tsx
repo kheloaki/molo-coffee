@@ -12,11 +12,8 @@ export default function LoadingProvider({ children }: { children: React.ReactNod
   const [hasChecked, setHasChecked] = useState(false);
 
   useEffect(() => {
-    // Check if we've already shown the loader in this session
-    const hasShown = sessionStorage.getItem("hasShownIntroLoader");
-    if (hasShown) {
-      setIsLoading(false);
-    }
+    // Show the loader on every page load as requested
+    setIsLoading(true);
     setHasChecked(true);
   }, []);
 

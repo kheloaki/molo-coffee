@@ -11,8 +11,16 @@ const IntroLoadingAnimation = ({ onComplete }: IntroLoadingAnimationProps) => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
 
-  // Using the cake image for all steps with clip-path simulation
-  const cakeImage = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/chocolate-cocoa-cuckoo-cake.png";
+  // 4 steps of the cake eating animation
+  const cakeSteps = [
+    "https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/cake-loading-1.png",
+    "https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/cake-loading-2.png",
+    "https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/cake-loading-3.png",
+    "https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/cake-loading-4.png"
+  ];
+
+  // Fallback to the main cake image if steps fail to load
+  const fallbackCake = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/chocolate-cocoa-cuckoo-cake.png";
 
   useEffect(() => {
     // Prevent scrolling during loading
@@ -20,21 +28,19 @@ const IntroLoadingAnimation = ({ onComplete }: IntroLoadingAnimationProps) => {
 
     // Sequence timing for the cake eating animation
     const sequence = async () => {
-      // Initial delay to ensure everything is ready
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // Initial delay
+      await new Promise((resolve) => setTimeout(resolve, 300));
 
-      // 4 steps of eating
+      // 4 steps of eating (1-indexed for the array)
       for (let i = 1; i <= 4; i++) {
         setCurrentStep(i);
-        // Play sound if we had one, or just a small pause
-        await new Promise((resolve) => setTimeout(resolve, 600));
+        await new Promise((resolve) => setTimeout(resolve, 500));
       }
 
       // Final step: fade out
       setCurrentStep(5);
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      await new Promise((resolve) => setTimeout(resolve, 600));
       
-      sessionStorage.setItem("hasShownIntroLoader", "true");
       setIsVisible(false);
       
       if (onComplete) {
@@ -51,43 +57,50 @@ const IntroLoadingAnimation = ({ onComplete }: IntroLoadingAnimationProps) => {
 
   if (!isVisible) return null;
 
-  // Clip paths for "eating" steps - simulating 4 distinct images/states
+  // Clip paths for fallback "eating" steps if images don't load or for smooth transitions
   const getClipPath = (step: number) => {
     switch (step) {
-      case 1: return "inset(0 0 0 0)"; // Full cake
-      case 2: return "polygon(0% 0%, 75% 0%, 75% 25%, 100% 25%, 100% 100%, 0% 100%)"; // First bite (top right)
-      case 3: return "polygon(0% 25%, 75% 25%, 75% 75%, 100% 75%, 100% 100%, 0% 100%)"; // Second bite (half gone)
-      case 4: return "polygon(25% 50%, 75% 50%, 75% 100%, 25% 100%)"; // Last piece (small center-bottom)
-      default: return "inset(0 0 100% 0)"; // Gone
+      case 1: return "inset(0 0 0 0)";
+      case 2: return "polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%, 50% 0)"; 
+      case 3: return "polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%)";
+      case 4: return "polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%)";
+      default: return "inset(0 0 100% 0)";
     }
   };
 
   return (
     <div
-      className={`intro-overlay fixed inset-0 w-full h-full bg-white z-[99999] flex items-center justify-center transition-opacity duration-700 ease-in-out ${
+      className={`intro-overlay fixed inset-0 w-full h-full bg-white z-[99999] flex items-center justify-center transition-opacity duration-500 ease-in-out ${
         currentStep === 5 ? "opacity-0" : "opacity-100"
       }`}
     >
       <div className="relative flex flex-col items-center justify-center">
         {/* The Cake - Centered and Animated */}
-        <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
-          <div 
-            className="absolute inset-0 transition-all duration-300 cubic-bezier(0.34, 1.56, 0.64, 1)"
-            style={{ 
-              clipPath: getClipPath(currentStep),
-              transform: currentStep === 0 ? 'scale(0.8)' : `scale(1) rotate(${currentStep * 5}deg)`,
-              opacity: currentStep > 0 && currentStep < 5 ? 1 : 0,
-              filter: `drop-shadow(0 20px 30px rgba(0,0,0,0.1))`
-            }}
-          >
-            <Image
-              src={cakeImage}
-              alt="Loading..."
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+        <div className="relative w-[180px] h-[180px] md:w-[240px] md:h-[240px]">
+          {cakeSteps.map((src, index) => (
+            <div 
+              key={index}
+              className="absolute inset-0 transition-opacity duration-150"
+              style={{ 
+                opacity: currentStep === index + 1 ? 1 : 0,
+                zIndex: currentStep === index + 1 ? 10 : 0
+              }}
+            >
+              <Image
+                src={src}
+                alt={`Loading Step ${index + 1}`}
+                fill
+                className="object-contain"
+                priority
+                onError={(e) => {
+                  // If specific step fails, use the fallback cake with clip-path
+                  const target = e.target as HTMLImageElement;
+                  target.src = fallbackCake;
+                  target.style.clipPath = getClipPath(index + 1);
+                }}
+              />
+            </div>
+          ))}
         </div>
 
         {/* Brand Message */}
