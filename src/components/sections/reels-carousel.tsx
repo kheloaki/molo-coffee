@@ -35,14 +35,14 @@ const ReelsCarousel = () => {
       <div className="flex">
         <motion.div
           className="flex gap-4"
-          animate={{
-            x: [0, -100 * reels.length + "%"],
-          }}
+            animate={{
+              x: [0, "-50%"],
+            }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 20,
+                duration: 60,
               ease: "linear",
             },
           }}
