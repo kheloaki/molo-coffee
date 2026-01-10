@@ -1,69 +1,53 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { VolumeX, Info } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-const reelShortcodes = [
-  "DFx9Y8GIbTj",
-  "DEqJ-rrOzQ6",
-  "DENIffwgJgU",
-  "DC9pY3NATTA",
-  "DCsGCEPIk0N",
-  "DCHaWe7I4mh",
-  "DBRnY2PIs8G",
+const reelFiles = [
+  "/reels/reel-1.mp4",
+  "/reels/reel-2.mp4",
+  "/reels/reel-3.mp4",
+  "/reels/reel-4.mp4",
+  "/reels/reel-5.mp4",
+  "/reels/reel-6.mp4",
+  "/reels/reel-7.mp4",
+  "/reels/reel-8.mp4",
 ];
 
-const VideoReel = ({ shortcode }: { shortcode: string }) => {
+const VideoReel = ({ src }: { src: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.play().catch(err => console.log("Play interrupted", err));
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+    }
+  };
 
   return (
     <div 
       className="relative w-[300px] h-[533px] flex-shrink-0 rounded-2xl overflow-hidden shadow-2xl bg-black group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      {/* 
-        Better clipping: 
-        Instagram embeds have a header (~54px) and a footer.
-        We scale and shift to focus ONLY on the video area.
-      */}
-      <div className="absolute inset-0 scale-[1.15] origin-center">
-        <iframe
-          src={`https://www.instagram.com/reel/${shortcode}/embed/?hidecaption=1`}
-          className="absolute top-[-48px] left-0 w-full h-[650px] border-0"
-          allowFullScreen
-          scrolling="no"
-        />
-      </div>
-
-      {/* Invisible overlay to block iframe clicks and handle hover */}
-      <div className="absolute inset-0 z-10 bg-transparent cursor-pointer" />
-      
-      {/* Audio Information Overlay */}
-      <div className={`absolute bottom-6 right-6 z-20 transition-all duration-300 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <div className="bg-black/60 backdrop-blur-md p-3 rounded-full text-white border border-white/20 hover:bg-black/80 transition-colors">
-                <VolumeX size={20} className="text-white/80" />
-              </div>
-            </TooltipTrigger>
-            <TooltipContent side="left" className="bg-black text-white border-white/10 max-w-[200px]">
-              <div className="flex flex-col gap-1 p-1">
-                <div className="flex items-center gap-2 font-semibold text-xs">
-                  <Info size={14} />
-                  <span>Audio Notice</span>
-                </div>
-                <p className="text-[10px] leading-relaxed opacity-80">
-                  Instagram restricts audio control for embedded videos. Click the reel to view with sound on Instagram.
-                </p>
-              </div>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      </div>
+      <video
+        ref={videoRef}
+        src={src}
+        className="absolute inset-0 w-full h-full object-cover"
+        loop
+        muted
+        playsInline
+        autoPlay
+      />
 
       {/* Decorative border on hover */}
       <div className={`absolute inset-0 border-2 border-primary/50 rounded-2xl z-30 pointer-events-none transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
@@ -73,7 +57,7 @@ const VideoReel = ({ shortcode }: { shortcode: string }) => {
 
 const ReelsCarousel = () => {
   // Triple the reels for a longer, smoother loop
-  const allShortcodes = [...reelShortcodes, ...reelShortcodes, ...reelShortcodes];
+  const allReels = [...reelFiles, ...reelFiles, ...reelFiles];
 
   return (
     <section className="py-24 bg-neutral-50 overflow-hidden relative">
@@ -106,8 +90,8 @@ const ReelsCarousel = () => {
           }}
           style={{ width: "fit-content" }}
         >
-          {allShortcodes.map((shortcode, index) => (
-            <VideoReel key={`${shortcode}-${index}`} shortcode={shortcode} />
+          {allReels.map((src, index) => (
+            <VideoReel key={`${src}-${index}`} src={src} />
           ))}
         </motion.div>
       </div>
