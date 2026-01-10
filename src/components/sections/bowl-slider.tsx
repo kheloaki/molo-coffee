@@ -4,31 +4,31 @@ import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const bowlSliderData = [
-  {
-    id: 1,
-    title: "Beetroot & Carrot Halwa",
-    image: "/images/440714628_412617558218906_1243123537659324564_n..jpg",
-  },
-  {
-    id: 2,
-    title: "Loaded Gyro Fries",
-    image: "/images/443822978_1647671506060042_4752071789845204004_n..jpg",
-  },
-  {
-    id: 3,
-    title: "Green Goddess Soup",
-    image: "/images/447780876_813283903708366_2273544669843657993_n..jpg",
-  },
-  {
-    id: 4,
-    title: "Baked Feta Pasta",
-    image: "/images/447781540_1863161767422589_258509655321531348_n..jpg",
-  },
-  {
-    id: 5,
-    title: "Falafels",
-    image: "/images/448232355_7692073540874012_2301012513348097185_n..jpg",
-  },
+    {
+      id: 1,
+      title: "Beetroot & Carrot Halwa",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/beetroot-halwa.png",
+    },
+    {
+      id: 2,
+      title: "Loaded Gyro Fries",
+      image: "https://jfvegancafe.com/wp-content/uploads/2024/09/loaded-gyro-fries.png",
+    },
+    {
+      id: 3,
+      title: "Green Goddess Soup",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/green-goddess-soup-26.png",
+    },
+    {
+      id: 4,
+      title: "Baked Feta Pasta",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/baked-feta-pasta-23.png",
+    },
+    {
+      id: 5,
+      title: "Falafels",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/6-falafels-29.png",
+    },
 ];
 
 export default function BowlSlider() {
