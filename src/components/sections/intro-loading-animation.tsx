@@ -29,16 +29,12 @@ const IntroLoadingAnimation = ({ onComplete }: IntroLoadingAnimationProps) => {
       img.src = src;
     });
 
-    let frameInterval: NodeJS.Timeout;
-    let completionTimeout: NodeJS.Timeout;
-
-    // Animation loop (300ms per frame as requested)
-    frameInterval = setInterval(() => {
+    const frameInterval = setInterval(() => {
       setCurrentFrame((prev) => (prev + 1) % frames.length);
     }, 300);
 
     // Show at least for 2 seconds or until the sequence finishes a few loops
-    completionTimeout = setTimeout(() => {
+    const completionTimeout = setTimeout(() => {
       setIsFadingOut(true);
       setTimeout(() => {
         setIsVisible(false);
