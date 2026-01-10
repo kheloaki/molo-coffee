@@ -44,10 +44,10 @@ const Header = () => {
               <ul className="flex items-center gap-[50px]">
                 <li>
                   <a 
-                    href="/menu" 
+                    href="/contact" 
                     className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
                   >
-                    Menu
+                    Contact
                   </a>
                 </li>
                 <li>
@@ -79,20 +79,18 @@ const Header = () => {
             <ul className="flex items-center gap-[50px]">
               <li>
                 <a 
-                  href="/contact" 
+                  href="/" 
                   className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
                 >
-                  Contact
+                  Home
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://app.squareup.com/gift/ML0TJAV1T1BQ2/order" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/menu" 
                   className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
                 >
-                  Gift Card
+                  Menu
                 </a>
               </li>
               <li>
@@ -138,27 +136,19 @@ const Header = () => {
         }`}
       >
         <nav className="flex flex-col gap-8">
-          <a href="/" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Home</a>
-          <a href="/menu" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Menu</a>
-          <a href="/about" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>About</a>
-          <a href="/contact" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-          <a 
-            href="https://app.squareup.com/gift/ML0TJAV1T1BQ2/order" 
-            className="font-display text-4xl text-black"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Gift Card
-          </a>
-          <a 
-            href="https://www.grubhub.com/restaurant/just-falafel-vegan-cafe-2111-west-loop-south-houston/9333792"
-            className="font-display text-4xl text-sage"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Order Now
-          </a>
-        </nav>
+            <a href="/" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Home</a>
+            <a href="/menu" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Menu</a>
+            <a href="/about" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>About</a>
+            <a href="/contact" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+            <a 
+              href="https://www.grubhub.com/restaurant/just-falafel-vegan-cafe-2111-west-loop-south-houston/9333792"
+              className="font-display text-4xl text-sage"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Order Now
+            </a>
+          </nav>
 
         <div className="mt-auto pb-12">
           <div className="w-full h-[1px] bg-border mb-8"></div>

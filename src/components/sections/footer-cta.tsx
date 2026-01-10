@@ -107,7 +107,7 @@ const FooterCTA = () => {
 
           {/* Overhanging Vines Asset */}
           <div 
-            className="absolute -top-8 md:-top-12 right-0 w-[300px] md:w-[500px] h-full pointer-events-none z-20"
+            className="absolute -top-7 md:-top-11 right-0 w-[300px] md:w-[500px] h-full pointer-events-none z-20"
             style={{
               transform: isVisible ? 'translateX(0)' : 'translateX(120%)',
               opacity: isVisible ? 1 : 0,
