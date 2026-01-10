@@ -72,7 +72,7 @@ export default function DishSlider() {
               style={{ opacity: textOpacity, y: textY }}
               className="font-serif-display text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] leading-[1.1] text-center text-black"
             >
-              fully-vegan restaurant in houston. elevate your palate, uplift the earth.
+              a taste of what’s to come.
             </motion.h2>
           </div>
         </div>
