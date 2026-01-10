@@ -2,7 +2,6 @@
 
 import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
-import IntroImages from "@/components/sections/intro-images";
 import Manifesto from "@/components/sections/manifesto";
 import DishSlider from "@/components/sections/dish-slider";
 import EatSipSplit from "@/components/sections/eat-sip-split";
