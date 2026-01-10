@@ -1,7 +1,35 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 const FooterCTA = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <footer className="footer-section bg-white w-full overflow-hidden font-body">
       {/* Top Footer Navigation / Logo */}
@@ -44,7 +72,7 @@ const FooterCTA = () => {
       </div>
 
       {/* Black Marble Contact Bar */}
-      <div className="relative w-full md:py-[51px] py-[100px] flex items-center overflow-hidden">
+      <div ref={sectionRef} className="relative w-full md:py-[51px] py-[100px] flex items-center overflow-hidden">
         {/* Real Marble Texture Image for the "Black Gold" effect */}
         <div className="absolute inset-0 z-0">
           <div 
@@ -78,7 +106,11 @@ const FooterCTA = () => {
         </div>
 
         {/* Overhanging Vines Asset */}
-        <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-full pointer-events-none z-20">
+        <div 
+          className={`absolute top-0 right-0 w-[300px] md:w-[500px] h-full pointer-events-none z-20 transition-all duration-[600ms] ease-out ${
+            isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[120%] opacity-0'
+          }`}
+        >
           <img 
             src="https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/branch_final-min.png" 
             alt="green-leaf" 
