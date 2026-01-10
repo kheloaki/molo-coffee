@@ -46,10 +46,10 @@ export default function DishSlider() {
   }, []);
 
   // Auto-slide every 2 seconds
-  useEffect(() => {
+    useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 2000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [nextSlide]);
 
