@@ -41,41 +41,45 @@ export function PageLoader() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white"
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-white"
           >
-            <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden rounded-full shadow-lg mb-8">
-              {images.map((src, index) => (
-                <motion.img
-                  key={src}
-                  src={src}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: [0, 1, 1, 0],
-                  }}
-                  transition={{
-                    duration: 1,
-                    times: [0, 0.2, 0.8, 1],
-                    delay: index * 0.5,
-                    repeat: 0,
-                  }}
-                  alt=""
+            <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
+              {/* Image Sequence Container */}
+              <div className="absolute inset-0 overflow-hidden rounded-full shadow-lg">
+                {images.map((src, index) => (
+                  <motion.img
+                    key={src}
+                    src={src}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: [0, 1, 1, 0],
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      times: [0, 0.2, 0.8, 1],
+                      delay: index * 0.4,
+                      repeat: 0,
+                    }}
+                    alt=""
+                  />
+                ))}
+              </div>
+              
+              {/* Logo - Fades in at the same position */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.6, duration: 0.5 }}
+                className="z-10"
+              >
+                <img 
+                  className="w-32 md:w-40 brightness-0" 
+                  src="/logo.png" 
+                  alt="Logo" 
                 />
-              ))}
+              </motion.div>
             </div>
-            
-            {/* Logo Vector Overlay */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.8, duration: 0.5 }}
-            >
-              <img 
-                className="w-32 md:w-40 brightness-0" 
-                src="/logo.png" 
-                alt="Logo" 
-              />
-            </motion.div>
           </motion.div>
       )}
     </AnimatePresence>
