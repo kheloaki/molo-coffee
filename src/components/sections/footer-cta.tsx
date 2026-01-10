@@ -72,9 +72,9 @@ const FooterCTA = () => {
       </div>
 
         {/* Black Marble Contact Bar */}
-        <div ref={sectionRef} className="relative w-full md:py-[51px] py-[100px] flex items-center overflow-hidden">
+        <div ref={sectionRef} className="relative w-full md:py-[51px] py-[100px] flex items-center">
           {/* Real Marble Texture Image for the "Black Gold" effect */}
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 overflow-hidden">
             <div 
               className="absolute inset-0 bg-[url('https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/dark-marble-6.webp')] bg-cover bg-center"
             ></div>
@@ -107,7 +107,7 @@ const FooterCTA = () => {
 
           {/* Overhanging Vines Asset */}
           <div 
-            className="absolute top-0 right-0 w-[300px] md:w-[500px] h-full pointer-events-none z-20"
+            className="absolute -top-8 md:-top-12 right-0 w-[300px] md:w-[500px] h-full pointer-events-none z-20"
             style={{
               transform: isVisible ? 'translateX(0)' : 'translateX(120%)',
               opacity: isVisible ? 1 : 0,
