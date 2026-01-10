@@ -2,6 +2,7 @@
 
 import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
+import ReelsCarousel from "@/components/sections/reels-carousel";
 import Manifesto from "@/components/sections/manifesto";
 import DishSlider from "@/components/sections/dish-slider";
 import EatSipSplit from "@/components/sections/eat-sip-split";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Header />
       <Hero />
+      <ReelsCarousel />
       <Manifesto />
       <DishSlider />
       <EatSipSplit />
