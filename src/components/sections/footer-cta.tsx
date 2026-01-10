@@ -71,53 +71,56 @@ const FooterCTA = () => {
         </nav>
       </div>
 
-      {/* Black Marble Contact Bar */}
-      <div ref={sectionRef} className="relative w-full md:py-[51px] py-[100px] flex items-center overflow-hidden">
-        {/* Real Marble Texture Image for the "Black Gold" effect */}
-        <div className="absolute inset-0 z-0">
+        {/* Black Marble Contact Bar */}
+        <div ref={sectionRef} className="relative w-full md:py-[51px] py-[100px] flex items-center overflow-hidden">
+          {/* Real Marble Texture Image for the "Black Gold" effect */}
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="absolute inset-0 bg-[url('https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/dark-marble-6.webp')] bg-cover bg-center"
+            ></div>
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+          
+          <div className="lg:px-[4%] w-full relative z-10 flex flex-col md:flex-row justify-between items-center max-w-[1440px] mx-auto px-8">
+            {/* Contact Number */}
+            <div className="flex justify-start items-center">
+              <a 
+                href="tel:713.505.1044" 
+                className="font-display text-[40px] md:text-[60px] lg:text-[75px] text-white tracking-normal leading-none hover:text-white/80 transition-opacity"
+              >
+                713.505.1044
+              </a>
+            </div>
+
+            {/* Order Now Link */}
+            <div className="relative flex justify-end items-center mt-12 md:mt-0">
+              <a 
+                href="https://www.grubhub.com/restaurant/just-falafel-vegan-cafe-2111-west-loop-south-houston/9333792?proof=true"
+                className="relative z-30 group"
+              >
+                <span className="font-display text-[40px] md:text-[60px] lg:text-[75px] text-white tracking-normal leading-none border-b-[1.5px] border-white pb-1 hover:border-white/80 hover:text-white/80 transition-all">
+                  Order Now
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Overhanging Vines Asset */}
           <div 
-            className="absolute inset-0 bg-[url('https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/footer-bg.jpg')] bg-cover bg-center"
-          ></div>
-          <div className="absolute inset-0 bg-black/20"></div>
-        </div>
-        
-        <div className="lg:px-[4%] w-full relative z-10 flex flex-col md:flex-row justify-between items-center max-w-[1440px] mx-auto px-8">
-          {/* Contact Number */}
-          <div className="flex justify-start items-center">
-            <a 
-              href="tel:713.505.1044" 
-              className="font-display text-[40px] md:text-[60px] lg:text-[75px] text-white tracking-normal leading-none hover:text-white/80 transition-opacity"
-            >
-              713.505.1044
-            </a>
-          </div>
-
-          {/* Order Now Link */}
-          <div className="relative flex justify-end items-center mt-12 md:mt-0">
-            <a 
-              href="https://www.grubhub.com/restaurant/just-falafel-vegan-cafe-2111-west-loop-south-houston/9333792?proof=true"
-              className="relative z-30 group"
-            >
-              <span className="font-display text-[40px] md:text-[60px] lg:text-[75px] text-white tracking-normal leading-none border-b-[1.5px] border-white pb-1 hover:border-white/80 hover:text-white/80 transition-all">
-                Order Now
-              </span>
-            </a>
+            className="absolute top-0 right-0 w-[300px] md:w-[500px] h-full pointer-events-none z-20"
+            style={{
+              transform: isVisible ? 'translateX(0)' : 'translateX(120%)',
+              opacity: isVisible ? 1 : 0,
+              transition: 'transform 600ms ease, opacity 400ms ease'
+            }}
+          >
+            <img 
+              src="https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/branch_final-min.png" 
+              alt="green-leaf" 
+              className="w-full h-full object-contain object-right-top"
+            />
           </div>
         </div>
-
-        {/* Overhanging Vines Asset */}
-        <div 
-          className={`absolute top-0 right-0 w-[300px] md:w-[500px] h-full pointer-events-none z-20 transition-all duration-[600ms] ease-out ${
-            isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[120%] opacity-0'
-          }`}
-        >
-          <img 
-            src="https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/branch_final-min.png" 
-            alt="green-leaf" 
-            className="w-full h-full object-contain object-right-top"
-          />
-        </div>
-      </div>
 
       {/* Information Section */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-[100px] py-[100px] bg-white">
