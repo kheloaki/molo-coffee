@@ -29,11 +29,20 @@ const IntroLoadingAnimation = ({ onComplete }: IntroLoadingAnimationProps) => {
       img.src = src;
     });
 
-    const frameInterval = setInterval(() => {
-      setCurrentFrame((prev) => (prev + 1) % frames.length);
-    }, 300);
+    const FRAME_DURATION = 800; // Slower speed
+    const TOTAL_FRAMES = frames.length;
 
-    // Show at least for 2 seconds or until the sequence finishes a few loops
+    const frameInterval = setInterval(() => {
+      setCurrentFrame((prev) => {
+        if (prev < TOTAL_FRAMES - 1) {
+          return prev + 1;
+        }
+        clearInterval(frameInterval);
+        return prev;
+      });
+    }, FRAME_DURATION);
+
+    // Show until the sequence finishes
     const completionTimeout = setTimeout(() => {
       setIsFadingOut(true);
       setTimeout(() => {
@@ -42,7 +51,7 @@ const IntroLoadingAnimation = ({ onComplete }: IntroLoadingAnimationProps) => {
           onComplete();
         }
       }, 700); // Match transition duration
-    }, 2500);
+    }, (FRAME_DURATION * TOTAL_FRAMES) + 400);
 
     return () => {
       document.body.style.overflow = "auto";
