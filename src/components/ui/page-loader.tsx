@@ -43,7 +43,7 @@ export function PageLoader() {
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="fixed inset-0 z-[9999] flex items-center justify-center bg-white"
           >
-            <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
+            <div className="relative w-56 h-56 md:w-80 md:h-80 flex items-center justify-center">
               {/* Image Sequence Container */}
               <div className="absolute inset-0 overflow-hidden rounded-full shadow-lg">
                 {images.map((src, index) => (
@@ -74,7 +74,7 @@ export function PageLoader() {
                 className="z-10"
               >
                 <img 
-                  className="w-32 md:w-40 brightness-0" 
+                  className="w-40 md:w-52" 
                   src="/logo.png" 
                   alt="Logo" 
                 />
