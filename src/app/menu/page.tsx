@@ -4,7 +4,7 @@ import MenuStarters from "@/components/sections/menu-starters";
 import MenuMain from "@/components/sections/menu-main";
 import MenuSoupsSides from "@/components/sections/menu-soups-sides";
 import MenuFriesDesserts from "@/components/sections/menu-fries-desserts";
-import Footer from "@/components/sections/footer";
+import FooterCTA from "@/components/sections/footer-cta";
 
 export default function MenuPage() {
   return (
@@ -15,7 +15,7 @@ export default function MenuPage() {
       <MenuMain />
       <MenuSoupsSides />
       <MenuFriesDesserts />
-      <Footer />
+      <FooterCTA />
     </main>
   );
 }

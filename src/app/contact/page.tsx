@@ -1,7 +1,7 @@
 import Header from "@/components/sections/header";
 import ContactHero from "@/components/sections/contact-hero";
 import ContactForm from "@/components/sections/contact-form";
-import Footer from "@/components/sections/footer";
+import FooterCTA from "@/components/sections/footer-cta";
 
 export default function ContactPage() {
   return (
@@ -9,7 +9,7 @@ export default function ContactPage() {
       <Header />
       <ContactHero />
       <ContactForm />
-      <Footer />
+      <FooterCTA />
     </main>
   );
 }

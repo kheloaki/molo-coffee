@@ -5,7 +5,7 @@ import AboutMission from "@/components/sections/about-mission";
 import AboutValues from "@/components/sections/about-values";
 import AboutDifferentiation from "@/components/sections/about-differentiation";
 import AboutCTA from "@/components/sections/about-cta";
-import Footer from "@/components/sections/footer";
+import FooterCTA from "@/components/sections/footer-cta";
 
 export default function AboutPage() {
   return (
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <AboutValues />
       <AboutDifferentiation />
       <AboutCTA />
-      <Footer />
+      <FooterCTA />
     </main>
   );
 }
