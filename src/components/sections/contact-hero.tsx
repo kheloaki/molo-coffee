@@ -79,17 +79,6 @@ const ContactHero = () => {
                   />
                 </div>
             </div>
-
-            {/* Overlapping Gold Chair Image */}
-            <div className="absolute left-[-5%] bottom-[-5%] w-[45%] md:w-[40%] max-w-[320px] z-30 pointer-events-none">
-              <Image 
-                className="w-full h-auto drop-shadow-2xl" 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/contact-banner-chair2-4.png" 
-                alt="Gold accent chair"
-                width={472}
-                height={619}
-              />
-            </div>
           </div>
         </div>
       </div>
