@@ -7,92 +7,89 @@ interface IntroLoadingAnimationProps {
   onComplete?: () => void;
 }
 
+const frames = [
+  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/falafel1-2.jpg",
+  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/falafel2-3.jpg",
+  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/falafel3-4.jpg",
+  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/falafel4-5.jpg"
+];
+
 const IntroLoadingAnimation = ({ onComplete }: IntroLoadingAnimationProps) => {
   const [isVisible, setIsVisible] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
-
-  // Use the reliable Supabase image for all steps
-  const cakeImage = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/chocolate-cocoa-cuckoo-cake.png";
+  const [currentFrame, setCurrentFrame] = useState(0);
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
     // Prevent scrolling during loading
     document.body.style.overflow = "hidden";
 
-    // Sequence timing for the cake eating animation
-    const sequence = async () => {
-      // Initial delay
-      await new Promise((resolve) => setTimeout(resolve, 300));
+    // Preload images
+    frames.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
 
-      // 4 steps of eating
-      for (let i = 1; i <= 4; i++) {
-        setCurrentStep(i);
-        await new Promise((resolve) => setTimeout(resolve, 600));
-      }
+    let frameInterval: NodeJS.Timeout;
+    let completionTimeout: NodeJS.Timeout;
 
-      // Final step: fade out
-      setCurrentStep(5);
-      await new Promise((resolve) => setTimeout(resolve, 800));
-      
-      setIsVisible(false);
-      
-      if (onComplete) {
-        onComplete();
-      }
-    };
+    // Animation loop (300ms per frame as requested)
+    frameInterval = setInterval(() => {
+      setCurrentFrame((prev) => (prev + 1) % frames.length);
+    }, 300);
 
-    sequence();
+    // Show at least for 2 seconds or until the sequence finishes a few loops
+    completionTimeout = setTimeout(() => {
+      setIsFadingOut(true);
+      setTimeout(() => {
+        setIsVisible(false);
+        if (onComplete) {
+          onComplete();
+        }
+      }, 700); // Match transition duration
+    }, 2500);
 
     return () => {
       document.body.style.overflow = "auto";
+      clearInterval(frameInterval);
+      clearTimeout(completionTimeout);
     };
   }, [onComplete]);
 
   if (!isVisible) return null;
 
-  // Refined clip paths to simulate a cake being eaten in 4 stages
-  const getClipPath = (step: number) => {
-    switch (step) {
-      case 1: return "inset(0 0 0 0)"; // Full cake
-      case 2: return "polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%, 50% 0)"; // Top left quarter gone
-      case 3: return "polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%)"; // Half gone
-      case 4: return "polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%)"; // Only bottom right quarter left
-      default: return "inset(0 0 100% 0)"; // Gone
-    }
-  };
-
   return (
     <div
       className={`intro-overlay fixed inset-0 w-full h-full bg-white z-[99999] flex items-center justify-center transition-opacity duration-700 ease-in-out ${
-        currentStep === 5 ? "opacity-0" : "opacity-100"
+        isFadingOut ? "opacity-0" : "opacity-100"
       }`}
     >
       <div className="relative flex flex-col items-center justify-center">
-        {/* The Cake - Centered and Animated */}
+        {/* The Animation - Centered */}
         <div className="relative w-[200px] h-[200px] md:w-[280px] md:h-[280px] mb-8">
-          {currentStep > 0 && currentStep < 5 && (
-            <div 
-              className="absolute inset-0 transition-all duration-300 ease-in-out"
-              style={{ 
-                clipPath: getClipPath(currentStep),
-              }}
+          {frames.map((src, index) => (
+            <div
+              key={src}
+              className={`absolute inset-0 transition-opacity duration-150 ${
+                currentFrame === index ? "opacity-100" : "opacity-0"
+              }`}
             >
               <Image
-                src={cakeImage}
-                alt="Loading Cake"
+                src={src}
+                alt={`Loading Frame ${index + 1}`}
                 fill
-                className="object-contain"
+                className="object-contain rounded-full"
                 priority
               />
             </div>
-          )}
+          ))}
         </div>
 
         {/* Brand Message */}
         <div 
           className="transition-all duration-1000"
           style={{ 
-            opacity: currentStep > 0 && currentStep < 5 ? 1 : 0,
-            transform: `translateY(${currentStep < 5 ? 0 : 20}px)`
+            opacity: isFadingOut ? 0 : 1,
+            transform: `translateY(${isFadingOut ? 20 : 0}px)`
           }}
         >
           <p className="font-display tracking-[0.4em] uppercase text-[11px] md:text-sm text-black whitespace-nowrap">
