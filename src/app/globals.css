@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #000000;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #000000;
+
+  --color-primary: #000000;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #9d794f;
+  --color-secondary-foreground: #ffffff;
+
+  --color-muted: #efefef;
+  --color-muted-foreground: #6f604d;
+
+  --color-accent: #9d794f;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: #e5e5e5;
+  --color-input: #e5e5e5;
+  --color-ring: #9d794f;
+
+  --color-chart-1: #9d794f;
+  --color-chart-2: #6f604d;
+  --color-chart-3: #000000;
+  --color-chart-4: #efefef;
+  --color-chart-5: #ffffff;
+
+  --color-sidebar: #ffffff;
+  --color-sidebar-foreground: #000000;
+  --color-sidebar-primary: #000000;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #efefef;
+  --color-sidebar-accent-foreground: #9d794f;
+  --color-sidebar-border: #e5e5e5;
+  --color-sidebar-ring: #9d794f;
+
+  --color-brand-gold: #9d794f;
+  --color-brand-taupe: #6f604d;
+  --color-brand-marble: #efefef;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+  --font-accent: "Playfair Display", serif;
+  --font-sans: "Jost", sans-serif;
+
+  --radius-lg: 0rem;
+  --radius-md: 0rem;
+  --radius-sm: 0rem;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border);
+  }
+
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --card: #ffffff;
+    --card-foreground: #000000;
+    --popover: #ffffff;
+    --popover-foreground: #000000;
+    --primary: #000000;
+    --primary-foreground: #ffffff;
+    --secondary: #9d794f;
+    --secondary-foreground: #ffffff;
+    --muted: #efefef;
+    --muted-foreground: #6f604d;
+    --accent: #9d794f;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #9d794f;
+    --radius: 0rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .font-serif-display {
+    font-family: var(--font-display);
+  }
+
+  .font-sans-modern {
+    font-family: var(--font-sans);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .marble-overlay {
+    background-image: url('https://www.transparenttextures.com/patterns/white-marble.png');
+    background-repeat: repeat;
+    opacity: 0.4;
+  }
+
+  .organic-mask-tl {
+    border-top-left-radius: 200px;
+  }
+
+  .organic-mask-br {
+    border-bottom-right-radius: 200px;
+  }
+
+  .organic-mask-tr {
+    border-top-right-radius: 200px;
+  }
+
+  .organic-mask-bl {
+    border-bottom-left-radius: 200px;
+  }
+
+  .nav-link {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--color-brand-gold);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .section-spacing {
+    padding-top: clamp(6rem, 10vw, 9rem);
+    padding-bottom: clamp(6rem, 10vw, 9rem);
+  }
+
+  .black-marble-footer {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1508873696983-2dfd5898f04b?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+nextjs-portal {
+  display: none !important;
+}
