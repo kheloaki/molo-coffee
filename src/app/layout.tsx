@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { VisualEditsMessenger } from "orchids-visual-edits";
+import IntroLoadingAnimation from "@/components/sections/intro-loading-animation";
 
 export const metadata: Metadata = {
   title: "JF Vegan Cafe | Fully-Vegan Restaurant in Houston",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <IntroLoadingAnimation />
         {children}
         <VisualEditsMessenger />
       </body>

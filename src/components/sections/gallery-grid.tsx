@@ -1,175 +1,148 @@
-"use client";
-
 import React from 'react';
 import Image from 'next/image';
 
 const GalleryGrid = () => {
-  const images = [
-    {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f1-16.jpg",
-      alt: "Diners lifestyle",
-      className: "w-full h-full object-cover rounded-full aspect-square",
-      wrapperClass: "col-span-1"
-    },
-    {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f2-17.jpg",
-      alt: "Restaurant interior and food table",
-      className: "w-full h-full object-cover organic-mask-tr",
-      wrapperClass: "col-span-3 row-span-2"
-    },
-    {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f4-1-20.jpg",
-      alt: "Overhead food spread",
-      className: "w-full h-full object-cover organic-mask-tr organic-mask-bl",
-      wrapperClass: "col-span-4 row-span-3"
-    },
-    {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f3-1-18.jpg",
-      alt: "Man sitting in circular booth",
-      className: "w-full h-full object-cover rounded-[30px]",
-      wrapperClass: "col-span-1"
-    },
-    {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f5-19.jpg",
-      alt: "Bar seating area",
-      className: "w-full h-full object-cover rounded-[30px]",
-      wrapperClass: "col-span-4 row-span-1"
-    },
-    {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f6-21.jpg",
-      alt: "Diner enjoying a meal",
-      className: "w-full h-full object-cover organic-mask-tr organic-mask-tl h-[400px]",
-      wrapperClass: "col-span-2 row-span-1 self-end"
-    },
-    {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f7-1-22.jpg",
-      alt: "Just Falafel engraved board",
-      className: "w-full h-full object-cover rounded-[30px]",
-      wrapperClass: "col-span-6 row-span-1"
-    }
-  ];
-
   return (
-    <section className="gallery-section section-spacing overflow-hidden bg-white/40 relative">
-      <div className="marble-overlay absolute inset-0 pointer-events-none" />
-      
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-8 gap-4 md:gap-7 items-stretch">
-          
-          {/* Top Left Circular and Arched Blocks */}
-          <div className="col-span-4 grid grid-cols-4 gap-4 md:gap-7">
-            <div className="col-span-1">
-              <div className="relative overflow-hidden rounded-full aspect-square mb-4 md:mb-7">
-                <Image 
-                  src={images[0].src} 
-                  alt={images[0].alt} 
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-[30px] aspect-[4/5]">
-                <Image 
-                  src={images[3].src} 
-                  alt={images[3].alt} 
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            
-            <div className="col-span-3">
-              <div className="relative overflow-hidden organic-mask-tr h-[450px] md:h-[550px]">
-                <Image 
-                  src={images[1].src} 
-                  alt={images[1].alt} 
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 border-[1px] border-black/5 organic-mask-tr top-4 left-4" />
-              </div>
-            </div>
+    <section className="bg-white py-[120px] overflow-hidden">
+      <div className="container mx-auto max-w-[1440px] px-8">
+        {/* Title Section */}
+        <div className="flex justify-center mb-16">
+          <h2 className="font-display text-[60px] md:text-[80px] text-center text-primary leading-tight tracking-tight">
+            deliciously bold in every bite
+          </h2>
+        </div>
 
-            <div className="col-span-4">
-              <div className="relative overflow-hidden rounded-[30px] h-[300px] md:h-[350px]">
-                <Image 
-                  src={images[4].src} 
-                  alt={images[4].alt} 
-                  fill
-                  className="object-cover"
-                />
-              </div>
+        {/* Masonry-style Masonry Gallery */}
+        <div className="relative grid grid-cols-12 gap-5 auto-rows-min">
+          {/* Floating Ingredients Background Decorations - Positoned relative to grid */}
+          <div className="absolute top-[10%] right-[-5%] z-20 pointer-events-none w-32 h-32 opacity-80 blur-[2px]">
+             <Image 
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f1-16.jpg" 
+                alt="herb" width={100} height={100} className="object-contain"
+             />
+          </div>
+          <div className="absolute top-[40%] left-[-8%] z-20 pointer-events-none w-48 h-48">
+            {/* SVG implementation or asset represent onion rings */}
+            <div className="relative w-full h-full opacity-60">
+                <div className="absolute top-0 left-0 w-32 h-32 rounded-full border-[12px] border-[#d48c8c] rotate-[15deg]"></div>
+                <div className="absolute top-6 left-12 w-28 h-28 rounded-full border-[10px] border-[#e2a1a1] -rotate-[10deg]"></div>
             </div>
           </div>
+          <div className="absolute top-[5%] left-[10%] z-20 pointer-events-none w-8 h-8 bg-[#D4AF37] rounded-full blur-[20px] opacity-30"></div>
+          <div className="absolute top-[60%] right-[15%] z-20 pointer-events-none w-10 h-10 flex items-center justify-center">
+             <div className="w-4 h-4 rounded-full bg-[#f1c27d] shadow-sm"></div>
+          </div>
 
-          {/* Right Large Organic Shape */}
-          <div className="col-span-4">
-            <div className="relative overflow-hidden organic-mask-tr organic-mask-bl h-full min-h-[600px] md:min-h-[850px]">
+          {/* First Row */}
+          {/* Left Column Group */}
+          <div className="col-span-12 md:col-span-2 flex flex-col gap-5">
+            <div className="rounded-full overflow-hidden aspect-square h-[200px] w-[200px]">
               <Image 
-                src={images[2].src} 
-                alt={images[2].alt} 
-                fill
-                className="object-cover"
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f1-16.jpg" 
+                alt="Social table" width={300} height={300} className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="arch-mask-tr overflow-hidden aspect-[3/4] rounded-t-[500px] rounded-br-2xl rounded-bl-2xl">
+              <Image 
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f2-17.jpg" 
+                alt="Man dining" width={300} height={400} className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          {/* Bottom Row - Featured Shapes */}
-          <div className="col-span-8 grid grid-cols-8 gap-4 md:gap-7 mt-4 md:mt-7">
-            <div className="col-span-3 md:col-span-2">
-              <div className="relative overflow-hidden organic-mask-tl organic-mask-tr h-[350px] md:h-[450px] border-[1px] border-black/10">
-                <Image 
-                  src={images[5].src} 
-                  alt={images[5].alt} 
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            
-            <div className="col-span-5 md:col-span-6">
-              <div className="relative overflow-hidden rounded-[30px] h-[350px] md:h-[450px]">
-                <Image 
-                  src={images[6].src} 
-                  alt={images[6].alt} 
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          {/* Center Large Arch */}
+          <div className="col-span-12 md:col-span-5">
+            <div className="arch-mask-tr overflow-hidden aspect-[4/5] rounded-tr-[400px] rounded-2xl relative border-transparent">
+               <div className="absolute inset-4 border border-white/20 rounded-tr-[380px] rounded-xl z-10"></div>
+               <Image 
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f3-1-18.jpg" 
+                alt="Feast spread" width={800} height={1000} className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
+          {/* Right Large Arch Group */}
+          <div className="col-span-12 md:col-span-5 flex flex-col gap-5">
+            <div className="arch-mask-bl overflow-hidden aspect-square rounded-bl-[400px] rounded-2xl">
+              <Image 
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f4-1-20.jpg" 
+                alt="Flatlay food" width={700} height={700} className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Second Row Masonry Items */}
+          <div className="col-span-12 md:col-span-4 mt-[-5%]">
+            <div className="rounded-2xl overflow-hidden aspect-[16/9]">
+              <Image 
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f5-19.jpg" 
+                alt="Counter view" width={600} height={350} className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Third Row "In-between" CTA */}
+          <div className="col-span-12 flex justify-center py-10 relative">
+             {/* Circular Button */}
+             <a href="/menu" className="group relative w-32 h-32 flex items-center justify-center">
+                <div className="absolute inset-0 border border-black/10 rounded-full group-hover:border-sage transition-colors duration-300"></div>
+                <div className="text-center font-body text-[10px] uppercase tracking-[0.2em] font-medium leading-tight">
+                  <span className="block">See</span>
+                  <span className="block">Menu</span>
+                </div>
+                {/* Visual indicator of circular text could be added here if asset provided */}
+             </a>
+          </div>
+
+          {/* Fourth Row */}
+          <div className="col-span-12 md:col-span-5">
+             <div className="rounded-2xl overflow-hidden aspect-[4/5] h-full">
+               <Image 
+                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f6-21.jpg" 
+                 alt="Detailed food" width={700} height={900} className="w-full h-full object-cover"
+               />
+             </div>
+          </div>
+
+          <div className="col-span-12 md:col-span-7 flex flex-col gap-5">
+            <div className="arch-mask-bl overflow-hidden aspect-[3/2] rounded-bl-[350px] rounded-2xl bg-[#76805B]/5">
+              <Image 
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f7-1-22.jpg" 
+                alt="Restaurant interior" width={900} height={600} className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-5 h-full">
+                <div className="rounded-2xl overflow-hidden aspect-video">
+                   <div className="w-full h-full bg-[#f7f7f7] flex items-center justify-center">
+                      <Image 
+                         src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f1-16.jpg" 
+                         alt="Mac n cheese" width={400} height={250} className="w-full h-full object-cover"
+                      />
+                   </div>
+                </div>
+                <div className="rounded-full overflow-hidden aspect-square self-center w-[120px] h-[120px]">
+                   <Image 
+                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f2-17.jpg" 
+                      alt="Small dish" width={150} height={150} className="w-full h-full object-cover"
+                   />
+                </div>
+            </div>
+          </div>
         </div>
 
-        {/* Section Headline Below Gallery */}
-        <div className="text-center mt-[100px] md:mt-[140px]">
-          <h2 className="text-[32px] md:text-[40px] font-display text-primary tracking-normal lowercase">
-            deliciously bold in every bite
-          </h2>
+        {/* Load More Button */}
+        <div className="flex flex-col items-center justify-center mt-20 gap-3">
+          <div className="w-8 h-8 opacity-20 hover:opacity-100 transition-opacity cursor-pointer">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" strokeWidth="1" />
+              <path d="M12 16H20M16 12V20" stroke="currentColor" strokeWidth="1" />
+            </svg>
+          </div>
+          <button className="font-body text-[10px] uppercase tracking-[0.3em] text-[#737373] hover:text-black transition-colors">
+            Load more
+          </button>
         </div>
       </div>
-
-      <style jsx global>{`
-        .organic-mask-tr {
-          border-top-right-radius: 200px;
-        }
-        .organic-mask-bl {
-          border-bottom-left-radius: 200px;
-        }
-        .organic-mask-tl {
-          border-top-left-radius: 200px;
-        }
-        .organic-mask-br {
-          border-bottom-right-radius: 200px;
-        }
-        @media (max-width: 768px) {
-          .organic-mask-tr, .organic-mask-bl, .organic-mask-tl, .organic-mask-br {
-            border-radius: 100px;
-          }
-          .organic-mask-tr { border-top-right-radius: 100px; }
-          .organic-mask-bl { border-bottom-left-radius: 100px; }
-          .organic-mask-tl { border-top-left-radius: 100px; }
-        }
-      `}</style>
     </section>
   );
 };
