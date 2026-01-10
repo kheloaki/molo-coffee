@@ -13,70 +13,70 @@ interface MenuItem {
 }
 
 const mainItems: MenuItem[] = [
-  {
-    title: "BYO Pita Wrap or Bowl",
-    price: "$14",
-    description: "Choice of toppings & sauce in a pita wrap or bowl. Choice of protein: falafel, jackfruit or gyro + $3. Add-ons: feta, cheddar or parmesan cheese, avocado, olives + $2 each. Gluten free without pita bread, tabbouleh and gyro",
-    tags: "Contains: wheat, sesame seeds, almonds, coconut, soy",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/build-your-own-8.png",
-    maskType: "plate"
-  },
-  {
-    title: "Tabbouleh Bowl",
-    price: "$16",
-    description: "Tabbouleh, falafel, chickpeas, cucumber mix, tomatoes, pickled red onions, feta cheese, and lemon vinaigrette. Add gyro + $5",
-    tags: "Contains: wheat, coconut, sesame seeds",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/tabbouleh-bowl-9.png",
-    maskType: "plate"
-  },
-  {
-    title: "Original Falafel Wrap",
-    price: "$13",
-    description: "Hummus, cucumber pickles, tomatoes, radishes, mint, parsley, falafel, and tahini sauce, served in pita bread",
-    tags: "Contains: wheat, sesame seeds",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/original-falafel-wrap-10.png",
-    maskType: "circle"
-  },
-  {
-    title: "Beyond Kebab",
-    price: "$21",
-    description: "Beyond kebab, turmeric rice, grilled onions, grilled tomatoes, and cucumber pickles, served with Indian sauce, topped with parsley",
-    tags: "Contains: wheat",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/beyond-kebab-11.png",
-    maskType: "circle"
-  },
-  {
-    title: "Desi Falafel Plate",
-    price: "$16 (GF)",
-    description: "Falafel, hummus, turmeric, rice, grilled onions, grilled tomatoes, cucumber, pickles, served with Indian sauce, topped with parsley. Add pita bread for + $2",
-    tags: "Contains: sesame seeds",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/desi-falafel-plate-12.png",
-    maskType: "circle"
-  },
-  {
-    title: "Beyond Burger",
-    price: "$17",
-    description: "Beyond burger patty (GF), cheese, tomato slices, pickled red onions, lettuce, avocado, house garlic sauce in a sesame bun. Served with hand-cut fries. Sub sweet potato fries for + $1",
-    tags: "Contains: wheat, sesame seeds, coconut",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/beyond-burger-13.png",
-    maskType: "circle"
-  },
-  {
-    title: "Beetroot Falafel Burger",
-    price: "$17",
-    description: "Beetroot falafel patty (GF), avocado, tomatoes, pickled red onions, lettuce, tzatziki, and hummus in a sesame bun. Served with sweet potato fries",
-    tags: "Contains: wheat, sesame seeds, almonds, GF oats. Sub multigrain gluten free bread $3",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/beetroot-falafel-burger-14.png",
-    maskType: "arch-right"
-  },
-  {
-    title: "Quesadilla Trio",
-    price: "$19",
-    description: "3 flour quesadillas with gyro, jackfruit, and falafel, melted cheddar cheese and topped with chipotle aioli and green onions",
-    tags: "Contains: wheat, coconut, soy",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/quesadilla-trio-15.png",
-    maskType: "circle"
-  },
+    {
+      title: "BYO Pita Wrap or Bowl",
+      price: "$14",
+      description: "Choice of toppings & sauce in a pita wrap or bowl. Choice of protein: Molo Coffee, jackfruit or gyro + $3. Add-ons: feta, cheddar or parmesan cheese, avocado, olives + $2 each. Gluten free without pita bread, tabbouleh and gyro",
+      tags: "Contains: wheat, sesame seeds, almonds, coconut, soy",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/build-your-own-8.png",
+      maskType: "plate"
+    },
+    {
+      title: "Tabbouleh Bowl",
+      price: "$16",
+      description: "Tabbouleh, Molo Coffee, chickpeas, cucumber mix, tomatoes, pickled red onions, feta cheese, and lemon vinaigrette. Add gyro + $5",
+      tags: "Contains: wheat, coconut, sesame seeds",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/tabbouleh-bowl-9.png",
+      maskType: "plate"
+    },
+    {
+      title: "Original Molo Coffee Wrap",
+      price: "$13",
+      description: "Hummus, cucumber pickles, tomatoes, radishes, mint, parsley, Molo Coffee, and tahini sauce, served in pita bread",
+      tags: "Contains: wheat, sesame seeds",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/original-falafel-wrap-10.png",
+      maskType: "circle"
+    },
+    {
+      title: "Beyond Kebab",
+      price: "$21",
+      description: "Beyond kebab, turmeric rice, grilled onions, grilled tomatoes, and cucumber pickles, served with Indian sauce, topped with parsley",
+      tags: "Contains: wheat",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/beyond-kebab-11.png",
+      maskType: "circle"
+    },
+    {
+      title: "Desi Molo Coffee Plate",
+      price: "$16 (GF)",
+      description: "Molo Coffee, hummus, turmeric, rice, grilled onions, grilled tomatoes, cucumber, pickles, served with Indian sauce, topped with parsley. Add pita bread for + $2",
+      tags: "Contains: sesame seeds",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/desi-falafel-plate-12.png",
+      maskType: "circle"
+    },
+    {
+      title: "Beyond Burger",
+      price: "$17",
+      description: "Beyond burger patty (GF), cheese, tomato slices, pickled red onions, lettuce, avocado, house garlic sauce in a sesame bun. Served with hand-cut fries. Sub sweet potato fries for + $1",
+      tags: "Contains: wheat, sesame seeds, coconut",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/beyond-burger-13.png",
+      maskType: "circle"
+    },
+    {
+      title: "Beetroot Molo Coffee Burger",
+      price: "$17",
+      description: "Beetroot Molo Coffee patty (GF), avocado, tomatoes, pickled red onions, lettuce, tzatziki, and hummus in a sesame bun. Served with sweet potato fries",
+      tags: "Contains: wheat, sesame seeds, almonds, GF oats. Sub multigrain gluten free bread $3",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/beetroot-falafel-burger-14.png",
+      maskType: "arch-right"
+    },
+    {
+      title: "Quesadilla Trio",
+      price: "$19",
+      description: "3 flour quesadillas with gyro, jackfruit, and Molo Coffee, melted cheddar cheese and topped with chipotle aioli and green onions",
+      tags: "Contains: wheat, coconut, soy",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/quesadilla-trio-15.png",
+      maskType: "circle"
+    },
   {
     title: "Gyro Burger",
     price: "$18",
@@ -133,30 +133,30 @@ const mainItems: MenuItem[] = [
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/just-egg-scramble-22.png",
     maskType: "plate"
   },
-  {
-    title: "Baked Feta Pasta",
-    price: "$16",
-    description: "Farfalle pasta, roasted cherry tomatoes, roasted garlic, feta cheese, fresh herbs. Served with French baguette slices. Choice of protein: falafel, jackfruit or gyro + $5",
-    tags: "Contains: wheat, coconut",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/baked-feta-pasta-23.png",
-    maskType: "circle"
-  },
-  {
-    title: "Mediterranean Harvest Pasta",
-    price: "$16",
-    description: "Farfalle pasta, green bell peppers, roasted red peppers, tomatoes, black olives, feta cheese, basil, red crushed pepper, and black pepper. Served with French baguette slices",
-    tags: "Contains: wheat, coconut",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/harvest-pasta-24.png",
-    maskType: "arch-right"
-  },
-  {
-    title: "Crispy Baked Mac ‘N Cheese",
-    price: "$16",
-    description: "Elbow macaroni, white miso cheese sauce, crispy bread crumb topping, served with French baguette slices. Choice of protein: falafel, jackfruit or gyro + $5",
-    tags: "Contains: wheat, coconut, soy",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/mac-n-cheesse-25.png",
-    maskType: "circle"
-  }
+    {
+      title: "Baked Feta Pasta",
+      price: "$16",
+      description: "Farfalle pasta, roasted cherry tomatoes, roasted garlic, feta cheese, fresh herbs. Served with French baguette slices. Choice of protein: Molo Coffee, jackfruit or gyro + $5",
+      tags: "Contains: wheat, coconut",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/baked-feta-pasta-23.png",
+      maskType: "circle"
+    },
+    {
+      title: "Mediterranean Harvest Pasta",
+      price: "$16",
+      description: "Farfalle pasta, green bell peppers, roasted red peppers, tomatoes, black olives, feta cheese, basil, red crushed pepper, and black pepper. Served with French baguette slices",
+      tags: "Contains: wheat, coconut",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/harvest-pasta-24.png",
+      maskType: "arch-right"
+    },
+    {
+      title: "Crispy Baked Mac ‘N Cheese",
+      price: "$16",
+      description: "Elbow macaroni, white miso cheese sauce, crispy bread crumb topping, served with French baguette slices. Choice of protein: Molo Coffee, jackfruit or gyro + $5",
+      tags: "Contains: wheat, coconut, soy",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/mac-n-cheesse-25.png",
+      maskType: "circle"
+    }
 ];
 
 const getImageMask = (type: MenuItem['maskType']) => {

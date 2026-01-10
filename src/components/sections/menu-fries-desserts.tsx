@@ -72,11 +72,11 @@ const FriendzFriesDesserts: React.FC = () => {
       image: "https://jfvegancafe.com/wp-content/uploads/2024/09/greek-gyro-fries.png"
     },
     {
-      title: "Loaded Falafel Fries",
+      title: "Loaded Molo Coffee Fries",
       price: "11",
       dietary: "GF",
       description: [
-        "Hand-cut fries topped with falafel, hummus, green olives, green onions, parsley, and tahini sauce",
+        "Hand-cut fries topped with Molo Coffee, hummus, green olives, green onions, parsley, and tahini sauce",
         "Contains: sesame seeds"
       ],
       image: "https://jfvegancafe.com/wp-content/uploads/2024/09/loaded-falafel-fries.png"

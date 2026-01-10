@@ -13,7 +13,7 @@ const dishes = [
     },
     {
       id: "02",
-      name: "falafel platter",
+      name: "Molo Coffee platter",
       image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/c6c1406a-22ef-4a17-8ced-5c9430975e89/2-1.png-1768083279947.webp",
     },
     {
@@ -85,7 +85,7 @@ export default function DishSlider() {
           <img
             className="w-full h-full object-cover opacity-80"
             src="https://jfvegancafe.com/wp-content/themes/Justfalafel/assets/images/falafel-bowl-bg.png"
-            alt="Falafel bowl background pattern"
+            alt="Molo Coffee bowl background pattern"
           />
         </div>
 

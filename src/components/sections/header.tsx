@@ -95,7 +95,8 @@ const Header = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.grubhub.com/restaurant/just-falafel-vegan-cafe-2111-west-loop-south-houston/9333792"
+                    href="https://www.grubhub.com/restaurant/molo-coffee-2111-west-loop-south-houston/9333792"
+
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`nav-link px-6 py-2 border rounded-full transition-all duration-300 ${
@@ -140,23 +141,23 @@ const Header = () => {
             <a href="/menu" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Menu</a>
             <a href="/about" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="/contact" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <a 
-              href="https://www.grubhub.com/restaurant/just-falafel-vegan-cafe-2111-west-loop-south-houston/9333792"
-              className="font-display text-4xl text-sage"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Order Now
-            </a>
-          </nav>
+              <a 
+                href="https://www.grubhub.com/restaurant/molo-coffee-2111-west-loop-south-houston/9333792"
+                className="font-display text-4xl text-sage"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Order Now
+              </a>
+            </nav>
 
-        <div className="mt-auto pb-12">
-          <div className="w-full h-[1px] bg-border mb-8"></div>
-          <p className="text-sm font-body uppercase tracking-widest mb-2">Location</p>
-          <address className="not-italic text-lg text-muted-foreground font-body">
-            2111 W Loop S Suite 100<br />
-            Houston, TX 77027
-          </address>
+          <div className="mt-auto pb-12">
+            <div className="w-full h-[1px] bg-border mb-8"></div>
+            <p className="text-sm font-body uppercase tracking-widest mb-2">Location</p>
+            <address className="not-italic text-lg text-muted-foreground font-body">
+              Haut founty rdc imm sinwan<br />
+              Agadir 80000, Morocco
+            </address>
           <div className="mt-6">
             <a href="tel:713.505.1044" className="text-3xl font-display text-black">713.505.1044</a>
           </div>

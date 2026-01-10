@@ -17,24 +17,24 @@ const soupItems = [
 ];
 
 const sideItems = [
-  {
-    title: '3 falafels $5 (GF)',
-    description: '3 chickpea falafels topped with parsley, served with 1 whole pickle and tahini sauce',
-    contains: 'Contains: sesame seeds',
-    image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/falafel-3-28.png'
-  },
-  {
-    title: '6 falafels $8 (GF)',
-    description: '6 chickpea falafels topped with parsley, served with 2 whole pickles and tahini sauce',
-    contains: 'Contains: sesame seeds',
-    image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/6-falafels-29.png'
-  },
-  {
-    title: '12 falafels $15 (GF)',
-    description: '12 chickpea falafels topped with parsley, served with 4 whole pickles and tahini sauce',
-    contains: 'Contains: sesame seeds',
-    image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/12-falafel-30.png'
-  },
+    {
+      title: '3 Molo Coffees $5 (GF)',
+      description: '3 chickpea Molo Coffees topped with parsley, served with 1 whole pickle and tahini sauce',
+      contains: 'Contains: sesame seeds',
+      image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/falafel-3-28.png'
+    },
+    {
+      title: '6 Molo Coffees $8 (GF)',
+      description: '6 chickpea Molo Coffees topped with parsley, served with 2 whole pickles and tahini sauce',
+      contains: 'Contains: sesame seeds',
+      image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/6-falafels-29.png'
+    },
+    {
+      title: '12 Molo Coffees $15 (GF)',
+      description: '12 chickpea Molo Coffees topped with parsley, served with 4 whole pickles and tahini sauce',
+      contains: 'Contains: sesame seeds',
+      image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/12-falafel-30.png'
+    },
   {
     title: 'Hummus $6',
     description: 'Served with pita bread or pita chips. GF without pita bread',

@@ -8,7 +8,7 @@ import Image from "next/image";
  * 
  * A dual-category interactive section featuring "eat" and "sip".
  * Implemented with background video transitions, floating fruit/drink assets,
- * and high-fidelity typography matching the Just Falafel design system.
+ * and high-fidelity typography matching the Molo Coffee design system.
  */
 export default function EatSipSplit() {
   const [hoveredSide, setHoveredSide] = useState<"eat" | "sip" | null>(null);

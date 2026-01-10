@@ -27,15 +27,15 @@ const AboutMission: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 text-left mt-8">
             <div className="flex flex-col gap-6">
               <p className="font-body text-[16px] md:text-[18px] text-black leading-[1.8] font-normal">
-                after nearly three years of hard work and dedication, just falafel vegan cafe was born! my husband shah and i are thrilled to share our passion for delicious, plant-based food with our community.
+                after nearly three years of hard work and dedication, Molo Coffee was born! my husband shah and i are thrilled to share our passion for delicious, plant-based food with our community.
               </p>
             </div>
             
-            <div className="flex flex-col gap-6">
-              <p className="font-body text-[16px] md:text-[18px] text-black leading-[1.8] font-normal">
-                at just falafel, we&apos;re all about respect – respect for animals, the environment, and our planet. our 100% vegan menu is carefully crafted to appeal to everyone, from die-hard vegans to curious foodies looking to try something new. we believe that by serving up tasty, innovative dishes, we&apos;re not only satisfying appetites but also supporting a more sustainable earth.
-              </p>
-            </div>
+              <div className="flex flex-col gap-6">
+                <p className="font-body text-[16px] md:text-[18px] text-black leading-[1.8] font-normal">
+                  at Molo Coffee, we&apos;re all about respect – respect for animals, the environment, and our planet. our 100% vegan menu is carefully crafted to appeal to everyone, from die-hard vegans to curious foodies looking to try something new. we believe that by serving up tasty, innovative dishes, we&apos;re not only satisfying appetites but also supporting a more sustainable earth.
+                </p>
+              </div>
           </div>
 
           {/* Bottom Decorative Element */}

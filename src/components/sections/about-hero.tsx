@@ -22,37 +22,30 @@ const AboutHero: React.FC = () => {
           Banner Wrapper 
           Using relative positioning to contain absolute elements 
       */}
-      <div className="relative h-full w-full">
-        
-        {/* Loading/Center Logo - Matches HTML 'falafel-logo-loading' */}
-        <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 md:top-[45%] pointer-events-none opacity-0 transition-opacity duration-700 animate-in fade-in-0 fill-mode-forwards">
-          <div className="w-[120px] md:w-[200px]">
-            <img 
-              src={logoWhite} 
-              alt="Just Falafel Logo" 
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-
-        {/* Video Background Container */}
-        <div className="relative h-full w-full overflow-hidden rounded-b-[30px]">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            id="bannerVideo"
-            className="h-full w-full object-cover"
-            poster="" // No poster provided in assets
-          >
-            <source src={videoSrc} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <div className="relative h-full w-full">
           
-          {/* Subtle overlay to ensure text readability if needed, though high-level design suggests high contrast */}
-          <div className="absolute inset-0 bg-black/10" />
-        </div>
+          {/* Loading/Center Logo - Matches HTML 'falafel-logo-loading' */}
+          <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 md:top-[45%] pointer-events-none opacity-0 transition-opacity duration-700 animate-in fade-in-0 fill-mode-forwards">
+            <div className="w-[120px] md:w-[200px]">
+              <img 
+                src={logoWhite} 
+                alt="Molo Coffee Logo" 
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Photo Background Container */}
+          <div className="relative h-full w-full overflow-hidden rounded-b-[30px]">
+            <img
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/c6c1406a-22ef-4a17-8ced-5c9430975e89/2025-12-07-1768087679310.png?width=8000&height=8000&resize=contain"
+              alt="Molo Coffee Store Front"
+              className="h-full w-full object-cover"
+            />
+            
+            {/* Subtle overlay to ensure text readability if needed, though high-level design suggests high contrast */}
+            <div className="absolute inset-0 bg-black/10" />
+          </div>
 
         {/* 
             Headline Overlay

@@ -5,8 +5,8 @@ import Script from "next/script";
 import { PageLoader } from "@/components/ui/page-loader";
 
 export const metadata: Metadata = {
-  title: "JF Vegan Cafe | Fully-Vegan Restaurant in Houston",
-  description: "Elevate your palate, uplift the earth. JF Vegan Cafe offers a premium fully-vegan culinary experience in Houston.",
+  title: "Molo Coffee | Fully-Vegan Restaurant in Agadir",
+  description: "Elevate your palate, uplift the earth. Molo Coffee offers a premium fully-vegan culinary experience in Agadir.",
 };
 
 export default function RootLayout({

@@ -13,7 +13,8 @@ const AboutIntro = () => {
           <div className="w-full lg:w-1/2 mt-12 lg:mt-0 order-2 lg:order-1">
             <div className="max-w-xl">
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-black leading-tight mb-8 lowercase">
-                i'm heer, the proud owner of just falafel vegan cafe, where we're serving up delicious, cruelty-free cuisine in the heart of river oaks, houston.
+                  i'm heer, the proud owner of Molo Coffee, where we're serving up delicious, cruelty-free cuisine in the heart of river oaks, houston.
+
               </h2>
               
               <p className="font-body text-base md:text-lg text-black leading-relaxed mb-6">
@@ -41,7 +42,8 @@ const AboutIntro = () => {
                   <div className="overflow-hidden rounded-t-[500px] aspect-[4/5] relative">
                     <Image
                       src="/images/481184171_17918895186059193_1126337300958062956_n..jpg"
-                      alt="Heer, Owner of Just Falafel Vegan Cafe"
+                        alt="Heer, Owner of Molo Coffee"
+
                       fill
                       className="object-cover"
                       priority

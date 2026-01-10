@@ -17,7 +17,7 @@ const MenuIntro = () => {
   const downloadIcon = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/svgs/download-sign-3.svg";
 
   return (
-    <section className="menu-intro-section md:pt-[286px] pt-[150px] overflow-hidden bg-white">
+    <section className="menu-intro-section md:pt-[160px] pt-[100px] overflow-hidden bg-white">
       <div className="container relative">
         <div className="flex flex-col items-center">
           {/* Headline */}

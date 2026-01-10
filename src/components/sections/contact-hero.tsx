@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ContactHero = () => {
   return (
-    <section className="contact-banner lg:pt-[236px] pt-[150px] pb-[100px] overflow-hidden bg-white">
+    <section className="contact-banner lg:pt-[60px] pt-[40px] pb-[60px] overflow-hidden bg-white">
       <div className="container mx-auto px-4 lg:px-0 lg:pl-[4%]">
         <div className="flex flex-wrap lg:flex-nowrap gap-0 lg:gap-[8%]">
           {/* Left Content Column */}
@@ -22,18 +22,18 @@ const ContactHero = () => {
                 </span>
               </div>
 
-              <div className="contact-items">
-                <p className="label-caps mb-1">email</p>
-                <span className="font-body text-[15px] text-black">
-                  <a href="mailto:contact@jfvegancafe.com" className="hover:text-accent transition-colors">contact@jfvegancafe.com</a>
-                </span>
-              </div>
+                <div className="contact-items">
+                  <p className="label-caps mb-1">email</p>
+                  <span className="font-body text-[15px] text-black">
+                    <a href="mailto:contact@molocoffee.com" className="hover:text-accent transition-colors">contact@molocoffee.com</a>
+                  </span>
+                </div>
 
               <div className="contact-items">
                 <p className="label-caps mb-1">address</p>
                 <span className="font-body text-[15px] text-black leading-relaxed">
-                  2111 W Loop S Suite 100<br />
-                  Houston, TX 77027
+                  Haut founty rdc imm sinwan<br />
+                  Agadir 80000, Morocco
                 </span>
               </div>
 

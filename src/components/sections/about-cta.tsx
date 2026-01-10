@@ -14,9 +14,9 @@ export default function AboutCTA() {
           
           {/* Text Content Area */}
           <div className="flex-1 max-w-[720px] pt-4">
-            <h2 className="text-foreground leading-[1.1] mb-12 lowercase text-balance">
-              so come on down to just falafel, a women-owned vegan cafe, and experience the difference for yourself!
-            </h2>
+              <h2 className="text-foreground leading-[1.1] mb-12 lowercase text-balance">
+                so come on down to Molo Coffee, a women-owned vegan cafe, and experience the difference for yourself!
+              </h2>
             
             <div className="max-w-[320px]">
               <p className="text-foreground font-body text-[16px] leading-[1.8] font-normal">
@@ -43,14 +43,14 @@ export default function AboutCTA() {
 
                 {/* The Pill Frame Container */}
                 <div className="pill-frame border-[#C5A059] w-[300px] h-[550px] sm:w-[500px] sm:h-[280px] md:w-[600px] md:h-[320px] lg:w-[660px] lg:h-[340px]">
-                  <Image
-                    src="/images/482493737_17919954429059193_7597223432630041423_n..jpg"
-                    alt="Just Falafel Vegan Cafe Interior Bar"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 660px"
-                    className="object-cover"
-                    priority
-                  />
+                    <Image
+                      src="/images/482493737_17919954429059193_7597223432630041423_n..jpg"
+                      alt="Molo Coffee Interior Bar"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 660px"
+                      className="object-cover"
+                      priority
+                    />
                 </div>
 
               {/* Background Decorative Arches (Subtle) */}

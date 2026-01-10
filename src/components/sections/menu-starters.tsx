@@ -2,21 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 
 const STARTERS_DATA = [
-  {
-    id: 1,
-    title: "Loaded Falafel Nachos $13",
-    description: "A bed of crispy pita chips loaded with hummus, tzatziki, falafel, Kalamata olives, tomatoes, pickled red onions, cucumbers, and feta cheese sprinkled with smoked paprika",
-    contains: "Contains: wheat, sesame seeds, almonds, coconut",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/loaded-falafel-nachos-2.png",
-    maskClass: "organic-mask-arch",
-    frame: true
-  },
-  {
-    id: 2,
-    title: "7-Layer Hummus Dip $13",
-    description: "Hummus, olive oil, tzatziki, cucumbers, cherry tomatoes, Kalamata olives, feta cheese, and pickled red onions sprinkled with smoked paprika. Served with pita bread or pita chips",
-    extra: "Choice of protein: falafel, jackfruit or gyro +$5",
-    contains: "Contains: wheat, sesame seeds, almonds, coconut",
+    {
+      id: 1,
+      title: "Loaded Molo Coffee Nachos $13",
+      description: "A bed of crispy pita chips loaded with hummus, tzatziki, Molo Coffee, Kalamata olives, tomatoes, pickled red onions, cucumbers, and feta cheese sprinkled with smoked paprika",
+      contains: "Contains: wheat, sesame seeds, almonds, coconut",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/loaded-falafel-nachos-2.png",
+      maskClass: "organic-mask-arch",
+      frame: true
+    },
+    {
+      id: 2,
+      title: "7-Layer Hummus Dip $13",
+      description: "Hummus, olive oil, tzatziki, cucumbers, cherry tomatoes, Kalamata olives, feta cheese, and pickled red onions sprinkled with smoked paprika. Served with pita bread or pita chips",
+      extra: "Choice of protein: Molo Coffee, jackfruit or gyro +$5",
+      contains: "Contains: wheat, sesame seeds, almonds, coconut",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/7-layer-hummus-dip-3.png",
     maskClass: "organic-mask-circle",
     frame: false

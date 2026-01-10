@@ -24,11 +24,11 @@ const bowlSliderData = [
       title: "Baked Feta Pasta",
       image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/baked-feta-pasta-23.png",
     },
-    {
-      id: 5,
-      title: "Falafels",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/6-falafels-29.png",
-    },
+      {
+        id: 5,
+        title: "Molo Coffee Special",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/6-falafels-29.png",
+      },
 ];
 
 export default function BowlSlider() {
@@ -50,26 +50,26 @@ export default function BowlSlider() {
       {/* White Space text section with Split Text effect */}
       <div className="section-padding">
         <div className="container max-w-[845px]">
-          <h2 className="text-[3.125rem] lg:text-[4.0625rem] text-center font-display leading-[1.1] text-primary flex flex-wrap justify-center gap-x-3">
-            {"fully-vegan restaurant in houston. elevate your palate, uplift the earth.".split(" ").map((word, i) => (
-              <span key={i} className="text-reveal-span">
-                {word}
-              </span>
-            ))}
-          </h2>
+            <h2 className="text-[3.125rem] lg:text-[4.0625rem] text-center font-display leading-[1.1] text-primary flex flex-wrap justify-center gap-x-3">
+              {"fully-vegan restaurant in agadir. elevate your palate, uplift the earth.".split(" ").map((word, i) => (
+                <span key={i} className="text-reveal-span">
+                  {word}
+                </span>
+              ))}
+            </h2>
+          </div>
         </div>
-      </div>
 
-      {/* Interactive Bowl Slider Section */}
-      <section className="falafel-bowl relative min-h-screen w-full flex flex-col justify-center items-center pb-[40px] mb-[100px]">
-        {/* Background Image Overlay - top left decorative bowl */}
-        <div className="absolute left-0 top-[-100px] md:top-[-200px] 2xl:top-[-350px] w-1/2 md:w-[40%] z-10 pointer-events-none transition-transform duration-700">
-          <img
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/falafel-bowl-bg-6.png"
-            alt="Decorative falafel background"
-            className="w-full h-auto object-contain opacity-90"
-          />
-        </div>
+        {/* Interactive Bowl Slider Section */}
+        <section className="falafel-bowl relative min-h-screen w-full flex flex-col justify-center items-center pb-[40px] mb-[100px]">
+          {/* Background Image Overlay - top left decorative bowl */}
+          <div className="absolute left-0 top-[-100px] md:top-[-200px] 2xl:top-[-350px] w-1/2 md:w-[40%] z-10 pointer-events-none transition-transform duration-700">
+            <img
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/falafel-bowl-bg-6.png"
+              alt="Decorative Molo Coffee background"
+              className="w-full h-auto object-contain opacity-90"
+            />
+          </div>
 
         {/* Content Centered Stack */}
         <div className="relative z-20 w-full max-w-[1440px] mx-auto px-10 pt-[135px]">
