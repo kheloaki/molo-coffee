@@ -62,11 +62,6 @@ const FooterCTA = () => {
                 Contact
               </a>
             </li>
-            <li>
-              <a href="https://app.squareup.com/gift/ML0TJAV1T1BQ2/order" className="text-[12px] uppercase tracking-[0.2em] font-medium hover:text-sage transition-colors">
-                Gift Card
-              </a>
-            </li>
           </ul>
         </nav>
       </div>
