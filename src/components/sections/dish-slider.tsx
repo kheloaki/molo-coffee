@@ -108,7 +108,7 @@ export default function DishSlider() {
                         key={dish.id}
                         initial={false}
                         animate={{
-                          x: `${adjustedOffset * 70}%`,
+                            x: `${adjustedOffset * 105}%`,
                           scale: 1, // Same level (no scale down)
                           opacity: Math.abs(adjustedOffset) > 1 ? 0 : 1, // Same opacity (no fade for side dishes)
                           zIndex: index === currentIndex ? 30 : 10,
