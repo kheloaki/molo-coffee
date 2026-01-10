@@ -38,13 +38,13 @@ const GalleryGrid = () => {
           <div className="col-span-12 md:col-span-2 flex flex-col gap-5">
             <div className="rounded-full overflow-hidden aspect-square h-[200px] w-[200px]">
               <Image 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f1-16.jpg" 
+                src="/images/449024213_474440865177036_8163426734877685796_n..jpg" 
                 alt="Social table" width={300} height={300} className="w-full h-full object-cover"
               />
             </div>
             <div className="arch-mask-tr overflow-hidden aspect-[3/4] rounded-t-[500px] rounded-br-2xl rounded-bl-2xl">
               <Image 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f2-17.jpg" 
+                src="/images/449141697_1037304744626208_2602252803528293892_n..jpg" 
                 alt="Man dining" width={300} height={400} className="w-full h-full object-cover"
               />
             </div>
@@ -55,7 +55,7 @@ const GalleryGrid = () => {
             <div className="arch-mask-tr overflow-hidden aspect-[4/5] rounded-tr-[400px] rounded-2xl relative border-transparent">
                <div className="absolute inset-4 border border-white/20 rounded-tr-[380px] rounded-xl z-10"></div>
                <Image 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f3-1-18.jpg" 
+                src="/images/450775995_361217107006480_6625207500007108250_n..jpg" 
                 alt="Feast spread" width={800} height={1000} className="w-full h-full object-cover"
               />
             </div>
@@ -65,7 +65,7 @@ const GalleryGrid = () => {
           <div className="col-span-12 md:col-span-5 flex flex-col gap-5">
             <div className="arch-mask-bl overflow-hidden aspect-square rounded-bl-[400px] rounded-2xl">
               <Image 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f4-1-20.jpg" 
+                src="/images/458135657_17896437768059193_4348378911448508946_n..jpg" 
                 alt="Flatlay food" width={700} height={700} className="w-full h-full object-cover"
               />
             </div>
@@ -75,7 +75,7 @@ const GalleryGrid = () => {
           <div className="col-span-12 md:col-span-4 mt-[-5%]">
             <div className="rounded-2xl overflow-hidden aspect-[16/9]">
               <Image 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f5-19.jpg" 
+                src="/images/461124813_17899245513059193_96335800381559850_n..jpg" 
                 alt="Counter view" width={600} height={350} className="w-full h-full object-cover"
               />
             </div>
@@ -98,7 +98,7 @@ const GalleryGrid = () => {
           <div className="col-span-12 md:col-span-5">
              <div className="rounded-2xl overflow-hidden aspect-[4/5] h-full">
                <Image 
-                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f6-21.jpg" 
+                 src="/images/466377286_17906019699059193_527036774663864487_n..jpg" 
                  alt="Detailed food" width={700} height={900} className="w-full h-full object-cover"
                />
              </div>
@@ -107,7 +107,7 @@ const GalleryGrid = () => {
           <div className="col-span-12 md:col-span-7 flex flex-col gap-5">
             <div className="arch-mask-bl overflow-hidden aspect-[3/2] rounded-bl-[350px] rounded-2xl bg-[#76805B]/5">
               <Image 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f7-1-22.jpg" 
+                src="/images/468940197_17908671693059193_5581053409320612379_n..jpg" 
                 alt="Restaurant interior" width={900} height={600} className="w-full h-full object-cover"
               />
             </div>
@@ -115,14 +115,14 @@ const GalleryGrid = () => {
                 <div className="rounded-2xl overflow-hidden aspect-video">
                    <div className="w-full h-full bg-[#f7f7f7] flex items-center justify-center">
                       <Image 
-                         src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f1-16.jpg" 
+                         src="/images/468955127_17908671495059193_3528655415189002965_n..jpg" 
                          alt="Mac n cheese" width={400} height={250} className="w-full h-full object-cover"
                       />
                    </div>
                 </div>
                 <div className="rounded-full overflow-hidden aspect-square self-center w-[120px] h-[120px]">
                    <Image 
-                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/f2-17.jpg" 
+                      src="/images/468974149_17908672071059193_7498746271692093694_n..jpg" 
                       alt="Small dish" width={150} height={150} className="w-full h-full object-cover"
                    />
                 </div>

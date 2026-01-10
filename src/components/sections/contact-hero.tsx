@@ -68,16 +68,16 @@ const ContactHero = () => {
                 alt="decoration"
               />
               
-              <div className="oval-frame w-full h-full relative overflow-hidden rounded-[200px] md:rounded-[300px]">
-                <Image 
-                  className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/contact-main-3.jpg"
-                  alt="Restaurant bar view"
-                  fill
-                  sizes="(max-width: 768px) 80vw, 50vw"
-                  priority
-                />
-              </div>
+                <div className="oval-frame w-full h-full relative overflow-hidden rounded-[200px] md:rounded-[300px]">
+                  <Image 
+                    className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                    src="/images/486618656_17922183816059193_2044738277493523661_n..jpg"
+                    alt="Restaurant bar view"
+                    fill
+                    sizes="(max-width: 768px) 80vw, 50vw"
+                    priority
+                  />
+                </div>
             </div>
 
             {/* Overlapping Gold Chair Image */}

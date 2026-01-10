@@ -38,15 +38,15 @@ const AboutIntro = () => {
             {/* Framed Owner Image */}
             <div className="relative z-10 w-[320px] sm:w-[400px] md:w-[480px] lg:w-[540px]">
               <div className="arch-frame border-[0.5px] border-[#c5a059] p-3 md:p-4 rounded-t-[500px]">
-                <div className="overflow-hidden rounded-t-[500px] aspect-[4/5] relative">
-                  <Image
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/owner-image-2-2.webp"
-                    alt="Heer, Owner of Just Falafel Vegan Cafe"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
+                  <div className="overflow-hidden rounded-t-[500px] aspect-[4/5] relative">
+                    <Image
+                      src="/images/481184171_17918895186059193_1126337300958062956_n..jpg"
+                      alt="Heer, Owner of Just Falafel Vegan Cafe"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
               </div>
 
               {/* Decorative Stars */}

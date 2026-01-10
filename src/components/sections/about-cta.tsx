@@ -41,17 +41,17 @@ export default function AboutCTA() {
                 ✦
               </div>
 
-              {/* The Pill Frame Container */}
-              <div className="pill-frame border-[#C5A059] w-[300px] h-[550px] sm:w-[500px] sm:h-[280px] md:w-[600px] md:h-[320px] lg:w-[660px] lg:h-[340px]">
-                <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/about-3-5.webp"
-                  alt="Just Falafel Vegan Cafe Interior Bar"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 660px"
-                  className="object-cover"
-                  priority
-                />
-              </div>
+                {/* The Pill Frame Container */}
+                <div className="pill-frame border-[#C5A059] w-[300px] h-[550px] sm:w-[500px] sm:h-[280px] md:w-[600px] md:h-[320px] lg:w-[660px] lg:h-[340px]">
+                  <Image
+                    src="/images/482493737_17919954429059193_7597223432630041423_n..jpg"
+                    alt="Just Falafel Vegan Cafe Interior Bar"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 660px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
 
               {/* Background Decorative Arches (Subtle) */}
               <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 opacity-10">

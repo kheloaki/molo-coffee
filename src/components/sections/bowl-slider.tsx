@@ -7,27 +7,27 @@ const bowlSliderData = [
   {
     id: 1,
     title: "Beetroot & Carrot Halwa",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/5-1-11.png",
+    image: "/images/440714628_412617558218906_1243123537659324564_n..jpg",
   },
   {
     id: 2,
     title: "Loaded Gyro Fries",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/3-7.png",
+    image: "/images/443822978_1647671506060042_4752071789845204004_n..jpg",
   },
   {
     id: 3,
     title: "Green Goddess Soup",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/1-8.png",
+    image: "/images/447780876_813283903708366_2273544669843657993_n..jpg",
   },
   {
     id: 4,
     title: "Baked Feta Pasta",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/4-9.png",
+    image: "/images/447781540_1863161767422589_258509655321531348_n..jpg",
   },
   {
     id: 5,
     title: "Falafels",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/2-1-10.png",
+    image: "/images/448232355_7692073540874012_2301012513348097185_n..jpg",
   },
 ];
 

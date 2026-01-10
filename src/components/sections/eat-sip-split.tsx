@@ -28,9 +28,9 @@ export default function EatSipSplit() {
 
   const assets = {
     eatVideo: "https://71three.sfo3.cdn.digitaloceanspaces.com/jf/eat_web.mp4",
-    sipBg: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/sip-bg-12.jpg",
-    glass: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/glass-13.png",
-    orange: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/orange-14.png",
+    sipBg: "/images/469052029_17908465200059193_6195888736497430274_n..jpg",
+    glass: "/images/469067135_17908672173059193_5449285138544187296_n..jpg",
+    orange: "/images/469218679_17908671450059193_3472703757816483800_n..jpg",
   };
 
   return (
