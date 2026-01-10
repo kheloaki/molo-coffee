@@ -8,33 +8,33 @@ import { useScroll, useTransform, motion } from "framer-motion";
 const dishes = [
     {
       id: "01",
-      name: "Beetroot & Carrot Halwa",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/beetroot-halwa.png",
+      name: "green goddess soup",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/c6c1406a-22ef-4a17-8ced-5c9430975e89/1.png-1768083279831.webp",
     },
     {
       id: "02",
-      name: "Loaded Gyro Fries",
-      image: "https://jfvegancafe.com/wp-content/uploads/2024/09/loaded-gyro-fries.png",
+      name: "falafel platter",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/c6c1406a-22ef-4a17-8ced-5c9430975e89/2-1.png-1768083279947.webp",
     },
     {
       id: "03",
-      name: "Green Goddess Soup",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/green-goddess-soup-26.png",
+      name: "loaded fries",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/c6c1406a-22ef-4a17-8ced-5c9430975e89/3.png-1768083279926.webp",
     },
     {
       id: "04",
-      name: "Baked Feta Pasta",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/baked-feta-pasta-23.png",
+      name: "baked feta pasta",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/c6c1406a-22ef-4a17-8ced-5c9430975e89/4.png-1768083279795.webp",
     },
     {
       id: "05",
-      name: "Falafels",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/6-falafels-29.png",
+      name: "beetroot halwa",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/c6c1406a-22ef-4a17-8ced-5c9430975e89/5-1.png-1768083279861.webp",
     },
 ];
 
 export default function DishSlider() {
-  const [currentIndex, setCurrentIndex] = useState(1); // Starting with "Loaded Gyro Fries" based on HTML dump
+  const [currentIndex, setCurrentIndex] = useState(0); 
   const targetRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = useCallback(() => {
@@ -97,18 +97,23 @@ export default function DishSlider() {
                 <div className="relative w-full h-full flex items-center justify-center">
                   {dishes.map((dish, index) => {
                     const offset = index - currentIndex;
-                    // Handle wrapping for a seamless feel if needed, but simple for now
+                    
+                    // Allow for infinite loop visual by checking relative offset
+                    let adjustedOffset = offset;
+                    if (offset > 2) adjustedOffset = offset - dishes.length;
+                    if (offset < -2) adjustedOffset = offset + dishes.length;
+
                     return (
                       <motion.div
                         key={dish.id}
                         initial={false}
                         animate={{
-                          x: `${offset * 75}%`,
-                          scale: index === currentIndex ? 1 : 0.6,
-                          opacity: Math.abs(offset) > 1 ? 0 : index === currentIndex ? 1 : 0.3,
+                          x: `${adjustedOffset * 70}%`,
+                          scale: 1, // Same level (no scale down)
+                          opacity: Math.abs(adjustedOffset) > 1 ? 0 : 1, // Same opacity (no fade for side dishes)
                           zIndex: index === currentIndex ? 30 : 10,
                         }}
-                        transition={{ type: "spring", stiffness: 120, damping: 20 }}
+                        transition={{ type: "spring", stiffness: 100, damping: 25 }}
                         className="absolute flex flex-col items-center justify-center pointer-events-none"
                       >
                         <div className="relative w-[280px] h-[280px] md:w-[500px] md:h-[500px] lg:w-[650px] lg:h-[650px]">
