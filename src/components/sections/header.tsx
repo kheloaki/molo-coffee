@@ -20,59 +20,59 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const logoPrimary = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/svgs/Falafel_vector-1.svg";
-  const logoWhite = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/images/Logo_vector_white-1.png";
+    const logoPrimary = "/logo.png";
+    const logoWhite = "/logo.png";
 
-  return (
-    <header 
-      className={`fixed left-0 top-0 w-full z-[100] transition-all duration-500 ease-in-out ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
-      }`}
-    >
-      {/* Background Gradient Mask Effect */}
-      <div 
-        className={`absolute inset-0 pointer-events-none transition-opacity duration-700 bg-gradient-to-b from-black/40 to-transparent h-[200px] ${
-          isScrolled ? 'opacity-0' : 'opacity-100'
+    return (
+      <header 
+        className={`fixed left-0 top-0 w-full z-[100] transition-all duration-500 ease-in-out ${
+          isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
         }`}
-      />
+      >
+        {/* Background Gradient Mask Effect */}
+        <div 
+          className={`absolute inset-0 pointer-events-none transition-opacity duration-700 bg-gradient-to-b from-black/40 to-transparent h-[200px] ${
+            isScrolled ? 'opacity-0' : 'opacity-100'
+          }`}
+        />
 
-      <div className="container relative z-10 px-4 md:px-8">
-        <nav className="flex items-center justify-between py-[25px] md:py-[30px]">
-          
-          {/* Left Menu */}
-          <div className="hidden lg:flex flex-1 items-center">
-            <ul className="flex items-center gap-[50px]">
-              <li>
-                <a 
-                  href="/menu" 
-                  className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
-                >
-                  Menu
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="/about" 
-                  className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
-                >
-                  About
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div className="container relative z-10 px-4 md:px-8">
+          <nav className="flex items-center justify-between py-[25px] md:py-[30px]">
+            
+            {/* Left Menu */}
+            <div className="hidden lg:flex flex-1 items-center">
+              <ul className="flex items-center gap-[50px]">
+                <li>
+                  <a 
+                    href="/menu" 
+                    className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
+                  >
+                    Menu
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/about" 
+                    className={`nav-link transition-colors duration-300 ${isScrolled ? 'text-black hover:text-sage' : 'text-white hover:text-sage'}`}
+                  >
+                    About
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Logo Central */}
-          <div className="flex items-center justify-center">
-            <a href="/" className="relative block h-[50px] w-[140px] md:h-[65px] md:w-[180px]">
-              <Image
-                src={isScrolled ? logoPrimary : logoWhite}
-                alt="Just Falafel Logo"
-                fill
-                className="object-contain transition-all duration-500"
-                priority
-              />
-            </a>
-          </div>
+            {/* Logo Central */}
+            <div className="flex items-center justify-center">
+              <a href="/" className="relative block h-[60px] w-[140px] md:h-[80px] md:w-[180px]">
+                <Image
+                  src={isScrolled ? logoPrimary : logoWhite}
+                  alt="MD Logo"
+                  fill
+                  className={`object-contain transition-all duration-500 ${!isScrolled ? 'brightness-0 invert' : ''}`}
+                  priority
+                />
+              </a>
+            </div>
 
           {/* Right Menu */}
           <div className="hidden lg:flex flex-1 items-center justify-end">

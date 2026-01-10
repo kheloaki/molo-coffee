@@ -10,22 +10,22 @@ const FooterCTA = () => {
     <footer className="footer-section bg-white w-full overflow-hidden">
       {/* Top Footer Navigation / Logo */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24 pt-20 pb-12 flex flex-col md:flex-row justify-between items-center md:items-end border-b border-transparent">
-        <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
-          <div className="w-[120px] h-auto">
-             <Image 
-              src="https://jfvegancafe.com/wp-content/uploads/2024/08/Falafel_vector.svg" 
-              alt="Just Falafel" 
-              width={120} 
-              height={60} 
-              className="w-full h-auto opacity-80"
-            />
+          <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
+            <div className="w-[80px] md:w-[100px] h-auto">
+               <Image 
+                src="/logo.png" 
+                alt="MD Logo" 
+                width={100} 
+                height={60} 
+                className="w-full h-auto"
+              />
+            </div>
           </div>
-        </div>
         <nav className="flex gap-8 lg:gap-12">
-          <a href="/menu" className="nav-link text-[12px] font-medium tracking-[0.2em] uppercase hover:text-[#9d794f] transition-colors duration-300">Menu</a>
-          <a href="/about" className="nav-link text-[12px] font-medium tracking-[0.2em] uppercase hover:text-[#9d794f] transition-colors duration-300">About</a>
-          <a href="/contact" className="nav-link text-[12px] font-medium tracking-[0.2em] uppercase hover:text-[#9d794f] transition-colors duration-300">Contact</a>
-          <a href="#" className="nav-link text-[12px] font-medium tracking-[0.2em] uppercase hover:text-[#9d794f] transition-colors duration-300">Gift Card</a>
+          <a href="/menu" className="nav-link text-[12px] font-medium tracking-[0.2em] uppercase hover:text-gold transition-colors duration-300">Menu</a>
+          <a href="/about" className="nav-link text-[12px] font-medium tracking-[0.2em] uppercase hover:text-gold transition-colors duration-300">About</a>
+          <a href="/contact" className="nav-link text-[12px] font-medium tracking-[0.2em] uppercase hover:text-gold transition-colors duration-300">Contact</a>
+          <a href="#" className="nav-link text-[12px] font-medium tracking-[0.2em] uppercase hover:text-gold transition-colors duration-300">Gift Card</a>
         </nav>
       </div>
 
@@ -54,14 +54,14 @@ const FooterCTA = () => {
         <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24 w-full relative z-10 flex justify-between items-center">
           <a 
             href="tel:713.505.1044" 
-            className="font-accent text-[28px] md:text-[40px] lg:text-[50px] text-white hover:text-[#9d794f] transition-colors duration-500 font-light"
+            className="font-accent text-[28px] md:text-[40px] lg:text-[50px] text-white hover:text-gold transition-colors duration-500 font-light"
           >
             713.505.1044
           </a>
           
           <a 
             href="https://www.grubhub.com/restaurant/just-falafel-vegan-cafe-2111-west-loop-south-houston/9333792?proof=true"
-            className="font-display italic text-[24px] md:text-[36px] lg:text-[45px] text-white hover:italic underline underline-offset-8 decoration-1 hover:text-[#9d794f] transition-all duration-500"
+            className="font-display italic text-[24px] md:text-[36px] lg:text-[45px] text-white hover:italic underline underline-offset-8 decoration-1 hover:text-gold transition-all duration-500"
           >
             order now
           </a>

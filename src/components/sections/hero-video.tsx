@@ -136,8 +136,8 @@ const HeroVideo = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 select-none">
          <img 
           className="w-48 brightness-0 animate-[ping_2s_ease-out_infinite]" 
-          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/svgs/Falafel_vector-3.svg" 
-          alt="Just Falafel" 
+          src="/logo.png" 
+          alt="Logo Overlay" 
         />
       </div>
     </section>

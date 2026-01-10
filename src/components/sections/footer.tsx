@@ -7,15 +7,15 @@ const Footer = () => {
       {/* Top Section with Logo and Sitemap Links */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-[100px] pt-[80px] pb-[40px]">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="mb-8 md:mb-0">
-            <a href="/" className="block w-[140px]">
-              <img 
-                src="https://jfvegancafe.com/wp-content/uploads/2024/08/Falafel_vector.svg" 
-                alt="Just Falafel Logo" 
-                className="w-full h-auto"
-              />
-            </a>
-          </div>
+            <div className="mb-8 md:mb-0">
+              <a href="/" className="block w-[80px] md:w-[100px]">
+                <img 
+                  src="/logo.png" 
+                  alt="MD Logo" 
+                  className="w-full h-auto"
+                />
+              </a>
+            </div>
           <nav>
             <ul className="flex flex-wrap gap-x-8 lg:gap-x-[50px] gap-y-4">
               <li>

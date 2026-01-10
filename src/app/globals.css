@@ -17,13 +17,13 @@
   --color-primary: #000000;
   --color-primary-foreground: #ffffff;
 
-  --color-secondary: #76805B;
+  --color-secondary: #005F5E;
   --color-secondary-foreground: #ffffff;
 
   --color-muted: #f5f5f5;
   --color-muted-foreground: #737373;
 
-  --color-accent: #D4AF37;
+  --color-accent: #F8842E;
   --color-accent-foreground: #ffffff;
 
   --color-destructive: #ef4444;
@@ -31,10 +31,10 @@
 
   --color-border: #e5e5e5;
   --color-input: #e5e5e5;
-  --color-ring: #76805B;
+  --color-ring: #005F5E;
 
-  --color-sage: #76805B;
-  --color-gold: #D4AF37;
+  --color-sage: #005F5E;
+  --color-gold: #F8842E;
 
   --font-display: "Italiana", serif;
   --font-body: "Montserrat", sans-serif;
@@ -84,15 +84,15 @@
     --popover-foreground: #000000;
     --primary: #000000;
     --primary-foreground: #ffffff;
-    --secondary: #76805B;
+    --secondary: #005F5E;
     --secondary-foreground: #ffffff;
     --muted: #f5f5f5;
     --muted-foreground: #737373;
-    --accent: #D4AF37;
+    --accent: #F8842E;
     --accent-foreground: #ffffff;
     --border: #e5e5e5;
     --input: #e5e5e5;
-    --ring: #76805B;
+    --ring: #005F5E;
     --radius: 0.5rem;
   }
 }
