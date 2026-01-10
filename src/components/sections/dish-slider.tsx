@@ -45,6 +45,14 @@ export default function DishSlider() {
     setCurrentIndex((prev) => (prev === 0 ? dishes.length - 1 : prev - 1));
   }, []);
 
+  // Auto-slide every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
+
   // Animation for the intro text reveal
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -82,83 +90,98 @@ export default function DishSlider() {
         </div>
 
         <div className="falafel-bowl-wrapper w-full h-full relative z-20 pt-[60px] md:pt-[135px]">
-          <div className="relative w-full h-full flex flex-col items-center justify-center">
-            
-            {/* Content Slider Transition Area */}
-            <div className="relative w-full flex-grow flex items-center justify-center overflow-hidden">
-              {dishes.map((dish, index) => (
-                <div
-                  key={dish.id}
-                  className={`absolute inset-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center ${
-                    currentIndex === index ? "opacity-100 z-30" : "opacity-0 z-0"
-                  }`}
-                >
-                  <div className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] transition-transform duration-1000 ease-out transform scale-100">
-                    <Image
-                      src={dish.image}
-                      alt={dish.name}
-                      fill
-                      className="object-contain"
-                      priority={currentIndex === index}
+            <div className="relative w-full h-full flex flex-col items-center justify-center">
+              
+              {/* Content Slider Transition Area */}
+              <div className="relative w-full flex-grow flex items-center justify-center overflow-visible">
+                <div className="relative w-full h-full flex items-center justify-center">
+                  {dishes.map((dish, index) => {
+                    const offset = index - currentIndex;
+                    // Handle wrapping for a seamless feel if needed, but simple for now
+                    return (
+                      <motion.div
+                        key={dish.id}
+                        initial={false}
+                        animate={{
+                          x: `${offset * 75}%`,
+                          scale: index === currentIndex ? 1 : 0.6,
+                          opacity: Math.abs(offset) > 1 ? 0 : index === currentIndex ? 1 : 0.3,
+                          zIndex: index === currentIndex ? 30 : 10,
+                        }}
+                        transition={{ type: "spring", stiffness: 120, damping: 20 }}
+                        className="absolute flex flex-col items-center justify-center pointer-events-none"
+                      >
+                        <div className="relative w-[280px] h-[280px] md:w-[500px] md:h-[500px] lg:w-[650px] lg:h-[650px]">
+                          <Image
+                            src={dish.image}
+                            alt={dish.name}
+                            fill
+                            className="object-contain drop-shadow-2xl"
+                            priority={currentIndex === index}
+                          />
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+
+                {/* Active Dish Name - Fixed Position */}
+                <div className="absolute bottom-[2%] md:bottom-[-5%] left-1/2 -translate-x-1/2 text-center w-full z-50">
+                  <motion.h2 
+                    key={currentIndex}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="font-serif-display text-[2.2rem] md:text-[3.5rem] lg:text-[4.5rem] text-center text-black px-4 lowercase"
+                  >
+                    {dishes[currentIndex].name}
+                  </motion.h2>
+                </div>
+              </div>
+
+              {/* Pagination and Navigation */}
+              <div className="falafel-bowl-pagination px-8 md:px-[60px] lg:px-[120px] flex justify-between items-end absolute left-0 right-0 bottom-[5%] md:bottom-[8%] w-full z-50">
+                
+                <div className="flex flex-col gap-2">
+                  {/* Counter */}
+                  <div className="pagination-count flex items-baseline gap-1 font-serif-display text-black">
+                    <span className="text-2xl md:text-3xl font-medium">
+                      {(currentIndex + 1).toString().padStart(2, "0")}
+                    </span>
+                    <span className="text-xs md:text-sm text-gray-400">
+                      {dishes.length.toString().padStart(2, "0")}
+                    </span>
+                  </div>
+                  {/* Progress Line */}
+                  <div className="relative w-24 md:w-32 h-[1px] bg-gray-200">
+                    <motion.div
+                      className="absolute h-full bg-black"
+                      initial={false}
+                      animate={{ width: `${((currentIndex + 1) / dishes.length) * 100}%` }}
                     />
                   </div>
-                  <h2 className="font-serif-display text-[2rem] md:text-[3.5rem] text-center text-black mt-8 px-4">
-                    {dish.name}
-                  </h2>
-                </div>
-              ))}
-            </div>
-
-            {/* Pagination and Navigation */}
-            <div className="falafel-bowl-pagination md:px-[60px] lg:px-[182px] flex justify-between items-end absolute left-0 right-0 bottom-[12%] md:bottom-[15%] w-full z-40">
-              
-              <div className="flex flex-col gap-4 w-full max-w-[200px] md:max-w-none">
-                {/* Progress Bar Container */}
-                <div className="relative w-full max-w-[300px] h-[3px] bg-[#EFEFEF]">
-                  <motion.div
-                    className="absolute h-full bg-brand-gold"
-                    initial={false}
-                    animate={{ width: `${((currentIndex + 1) / dishes.length) * 100}%` }}
-                    transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                  />
                 </div>
 
-                {/* Counter */}
-                <div className="pagination-count flex items-baseline gap-2 font-serif-display text-black">
-                  <span className="text-xl md:text-2xl font-medium">
-                    {(currentIndex + 1).toString().padStart(2, "0")}
-                  </span>
-                  <span className="text-xs md:text-sm text-gray-400">
-                    {dishes.length.toString().padStart(2, "0")}
-                  </span>
+                {/* Navigation Arrows */}
+                <div className="flex items-center gap-8 md:gap-12">
+                  <button
+                    onClick={prevSlide}
+                    className="group hover:opacity-50 transition-opacity"
+                    aria-label="Previous slide"
+                  >
+                    <ChevronLeft strokeWidth={1} className="w-8 h-8 md:w-12 md:h-12 text-black" />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="group hover:opacity-50 transition-opacity"
+                    aria-label="Next slide"
+                  >
+                    <ChevronRight strokeWidth={1} className="w-8 h-8 md:w-12 md:h-12 text-black" />
+                  </button>
                 </div>
               </div>
 
-              {/* Custom SVG Arrows */}
-              <div className="falafel-bowl-slider-arrow flex justify-end items-center gap-10 md:gap-16">
-                <button
-                  onClick={prevSlide}
-                  className="group hover:opacity-70 transition-opacity"
-                  aria-label="Previous slide"
-                >
-                  <div className="relative w-8 md:w-10 h-16 md:h-20 flex items-center justify-center">
-                    <ChevronLeft strokeWidth={1} className="w-8 h-8 md:w-12 md:h-12 text-[#9D794F]" />
-                  </div>
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="group hover:opacity-70 transition-opacity"
-                  aria-label="Next slide"
-                >
-                  <div className="relative w-8 md:w-10 h-16 md:h-20 flex items-center justify-center">
-                    <ChevronRight strokeWidth={1} className="w-8 h-8 md:w-12 md:h-12 text-[#9D794F]" />
-                  </div>
-                </button>
-              </div>
             </div>
-
           </div>
-        </div>
 
         {/* Subtle Bottom Texture Overlay */}
         <div className="absolute inset-0 marble-overlay z-0 pointer-events-none" />
