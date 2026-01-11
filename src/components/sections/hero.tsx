@@ -43,7 +43,7 @@ const Hero = () => {
                       d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
                     />
                   </defs>
-                    <text className="fill-orange-500/40 font-sans text-[9px] uppercase tracking-[0.3em]">
+                      <text className="fill-white/40 font-sans text-[9px] uppercase tracking-[0.3em]">
                       <textPath xlinkHref="#circlePath">
                         see menu • see menu • see menu • 
                       </textPath>
@@ -51,11 +51,14 @@ const Hero = () => {
                   </svg>
                 </div>
 
-                {/* Central Arrow/Dot Icon */}
-                <div className="w-1.5 h-1.5 bg-orange-500/40 rounded-full transition-transform duration-300 group-hover:scale-150" />
-                
-                {/* Outer Border Circle */}
-                <div className="absolute inset-0 rounded-full border border-orange-500/20 transition-opacity duration-300 group-hover:border-orange-500/40" />
+                  {/* Central Arrow/Dot Icon */}
+                  <div className="w-1.5 h-1.5 bg-orange-500/40 rounded-full transition-transform duration-300 group-hover:scale-150 z-10" />
+                  
+                  {/* Inner Circle Background */}
+                  <div className="absolute inset-4 rounded-full bg-orange-500/10 transition-opacity duration-300 group-hover:bg-orange-500/20" />
+
+                  {/* Outer Border Circle */}
+                  <div className="absolute inset-0 rounded-full border border-orange-500/20 transition-opacity duration-300 group-hover:border-orange-500/40" />
               </a>
           </div>
         </div>
