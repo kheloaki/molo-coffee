@@ -93,21 +93,19 @@ const Header = () => {
                     About
                   </a>
                 </li>
-                <li>
-                  <a 
-                      href="https://www.grubhub.com/restaurant/molo-coffee-2111-west-loop-south-houston/9333792"
+                  <li>
+                    <a 
+                        href="/order-now"
 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`nav-link px-6 py-2 border rounded-full transition-all duration-300 ${
-                      isScrolled 
-                        ? 'border-black text-black hover:bg-black hover:text-white' 
-                        : 'border-white text-white hover:bg-white hover:text-black'
-                    }`}
-                  >
-                    Order Now
-                  </a>
-                </li>
+                      className={`nav-link px-6 py-2 border rounded-full transition-all duration-300 ${
+                        isScrolled 
+                          ? 'border-black text-black hover:bg-black hover:text-white' 
+                          : 'border-white text-white hover:bg-white hover:text-black'
+                      }`}
+                    >
+                      Order Now
+                    </a>
+                  </li>
               </ul>
             </div>
 
@@ -141,14 +139,13 @@ const Header = () => {
             <a href="/menu" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Menu</a>
             <a href="/about" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="/contact" className="font-display text-4xl text-black" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-              <a 
-                href="https://www.grubhub.com/restaurant/molo-coffee-2111-west-loop-south-houston/9333792"
-                className="font-display text-4xl text-sage"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Order Now
-              </a>
+                <a 
+                  href="/order-now"
+                  className="font-display text-4xl text-sage"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Order Now
+                </a>
             </nav>
 
           <div className="mt-auto pb-12">
