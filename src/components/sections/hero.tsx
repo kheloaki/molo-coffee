@@ -54,11 +54,11 @@ const Hero = () => {
                   {/* Central Arrow/Dot Icon */}
                   <div className="w-1.5 h-1.5 bg-orange-500/40 rounded-full transition-transform duration-300 group-hover:scale-150 z-10" />
                   
-                  {/* Inner Circle Background */}
-                  <div className="absolute inset-4 rounded-full bg-orange-500/10 transition-opacity duration-300 group-hover:bg-orange-500/20" />
+                    {/* Inner Circle Background */}
+                    <div className="absolute inset-4 rounded-full bg-orange-500/40 backdrop-blur-md transition-opacity duration-300 group-hover:bg-orange-500/50" />
 
-                  {/* Outer Border Circle */}
-                  <div className="absolute inset-0 rounded-full border border-orange-500/20 transition-opacity duration-300 group-hover:border-orange-500/40" />
+                    {/* Outer Border Circle */}
+                    <div className="absolute inset-0 rounded-full border border-orange-500/40 bg-orange-500/10 backdrop-blur-sm transition-opacity duration-300 group-hover:border-orange-500/60" />
               </a>
           </div>
         </div>
