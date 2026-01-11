@@ -30,35 +30,35 @@ const Hero = () => {
 
           {/* Animated Circular Button */}
           <div className="relative group cursor-pointer animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300 ease-out">
-            <a 
-              href="/menu/" 
-              className="relative flex items-center justify-center w-[120px] h-[120px] md:w-[140px] md:h-[140px] transition-transform duration-500 hover:scale-110"
-            >
-              {/* Rotating Text Outer Ring */}
-              <div className="absolute inset-0 animate-[spin_10s_linear_infinite]">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <path
-                      id="circlePath"
-                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    />
-                  </defs>
-                      <text className="fill-white/40 font-sans text-[9px] uppercase tracking-[0.3em]">
+              <a 
+                href="/menu/" 
+                className="relative flex items-center justify-center w-[120px] h-[120px] md:w-[140px] md:h-[140px] transition-transform duration-500 hover:scale-110"
+              >
+                {/* Central Arrow/Dot Icon */}
+                <div className="w-1.5 h-1.5 bg-orange-500/60 rounded-full transition-transform duration-300 group-hover:scale-150 z-10" />
+                
+                {/* Inner Circle Background */}
+                <div className="absolute inset-4 rounded-full bg-orange-500/30 backdrop-blur-md transition-opacity duration-300 group-hover:bg-orange-500/40" />
+
+                {/* Outer Border Circle */}
+                <div className="absolute inset-0 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm transition-opacity duration-300 group-hover:border-orange-500/50" />
+
+                {/* Rotating Text Outer Ring */}
+                <div className="absolute inset-0 animate-[spin_10s_linear_infinite] z-20">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <defs>
+                      <path
+                        id="circlePath"
+                        d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                      />
+                    </defs>
+                    <text className="fill-white font-sans text-[10px] font-medium uppercase tracking-[0.3em]">
                       <textPath xlinkHref="#circlePath">
                         see menu • see menu • see menu • 
                       </textPath>
                     </text>
                   </svg>
                 </div>
-
-                  {/* Central Arrow/Dot Icon */}
-                  <div className="w-1.5 h-1.5 bg-orange-500/40 rounded-full transition-transform duration-300 group-hover:scale-150 z-10" />
-                  
-                    {/* Inner Circle Background */}
-                    <div className="absolute inset-4 rounded-full bg-orange-500/40 backdrop-blur-md transition-opacity duration-300 group-hover:bg-orange-500/50" />
-
-                    {/* Outer Border Circle */}
-                    <div className="absolute inset-0 rounded-full border border-orange-500/40 bg-orange-500/10 backdrop-blur-sm transition-opacity duration-300 group-hover:border-orange-500/60" />
               </a>
           </div>
         </div>
