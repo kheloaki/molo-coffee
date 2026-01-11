@@ -43,20 +43,20 @@ const Hero = () => {
                       d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
                     />
                   </defs>
-                  <text className="fill-white font-sans text-[9px] uppercase tracking-[0.3em]">
-                    <textPath xlinkHref="#circlePath">
-                      see menu • see menu • see menu • 
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
+                    <text className="fill-orange-500/40 font-sans text-[9px] uppercase tracking-[0.3em]">
+                      <textPath xlinkHref="#circlePath">
+                        see menu • see menu • see menu • 
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
 
-              {/* Central Arrow/Dot Icon */}
-              <div className="w-1.5 h-1.5 bg-white rounded-full transition-transform duration-300 group-hover:scale-150" />
-              
-              {/* Outer Border Circle */}
-              <div className="absolute inset-0 rounded-full border border-white/30 transition-opacity duration-300 group-hover:border-white/60" />
-            </a>
+                {/* Central Arrow/Dot Icon */}
+                <div className="w-1.5 h-1.5 bg-orange-500/40 rounded-full transition-transform duration-300 group-hover:scale-150" />
+                
+                {/* Outer Border Circle */}
+                <div className="absolute inset-0 rounded-full border border-orange-500/20 transition-opacity duration-300 group-hover:border-orange-500/40" />
+              </a>
           </div>
         </div>
       </div>
