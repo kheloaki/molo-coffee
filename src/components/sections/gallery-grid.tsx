@@ -84,14 +84,22 @@ const GalleryGrid = () => {
           {/* Third Row "In-between" CTA */}
           <div className="col-span-12 flex justify-center py-10 relative">
              {/* Circular Button */}
-             <a href="/menu" className="group relative w-32 h-32 flex items-center justify-center">
-                <div className="absolute inset-0 border border-black/10 rounded-full group-hover:border-sage transition-colors duration-300"></div>
-                <div className="text-center font-body text-[10px] uppercase tracking-[0.2em] font-medium leading-tight">
-                  <span className="block">See</span>
-                  <span className="block">Menu</span>
-                </div>
-                {/* Visual indicator of circular text could be added here if asset provided */}
-             </a>
+               <a href="/menu" className="group relative w-32 h-32 flex items-center justify-center transition-transform duration-500 hover:scale-110">
+                  {/* Inner Circle Background */}
+                  <div className="absolute inset-4 rounded-full bg-orange-500/40 backdrop-blur-md transition-all duration-300 group-hover:bg-orange-500/50" />
+
+                  {/* Outer Border Circle ("The Big Circle") */}
+                  <div className="absolute inset-0 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm transition-all duration-300 group-hover:border-orange-500/50" />
+                  
+                  {/* Central Dot */}
+                  <div className="absolute w-1.5 h-1.5 bg-orange-500/60 rounded-full transition-transform duration-300 group-hover:scale-150 z-10" />
+
+                  {/* Text Overlay */}
+                  <div className="relative z-20 text-center font-body text-[11px] uppercase tracking-[0.2em] font-bold leading-tight text-white drop-shadow-sm">
+                    <span className="block">See</span>
+                    <span className="block">Menu</span>
+                  </div>
+               </a>
           </div>
 
           {/* Fourth Row */}
