@@ -150,16 +150,6 @@ const FooterCTA = () => {
             </div>
           </div>
 
-          {/* Credits Column */}
-          <div className="lg:col-span-3 flex md:justify-end items-end pb-2">
-            <a href="https://71three.com" target="_blank" rel="noopener noreferrer" className="block w-[120px] opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-               <img 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/c6c1406a-22ef-4a17-8ced-5c9430975e89-jfvegancafe-com/assets/svgs/71three-logo-7.svg" 
-                alt="By 71three" 
-                className="w-full h-auto"
-              />
-            </a>
-          </div>
 
         </div>
       </div>
